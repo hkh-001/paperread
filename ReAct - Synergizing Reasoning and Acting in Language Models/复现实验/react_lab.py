@@ -263,7 +263,7 @@ def solve(client, method, question, env, args):
             status = 'api_error'
             break
         event.update(raw_output=text, **metadata)
-        messages.append({'role': 'assistant', 'content': text})
+        # Keep raw output in the audit trace; admit it to context only after validation.
         try:
             if method in ('direct', 'cot'):
                 answer = parse_final(text)
@@ -278,12 +278,15 @@ def solve(client, method, question, env, args):
             event['action'] = {'name': name, 'argument': value}
         except ValueError as exc:
             event['format_error'] = str(exc)
+            event['accepted_to_context'] = False
             trace.append(event)
             if method in ('direct', 'cot'):
                 status = 'format_error'
                 break
             messages.append({'role': 'user', 'content': 'Format error: ' + str(exc)})
             continue
+        event['accepted_to_context'] = True
+        messages.append({'role': 'assistant', 'content': text})
         try:
             observation, done = env.step(name, value)
         except Exception as exc:

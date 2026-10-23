@@ -1,5 +1,6 @@
 import argparse
 import contextlib
+import copy
 import io
 import json
 from pathlib import Path
@@ -61,6 +62,61 @@ class LabTests(unittest.TestCase):
         self.assertEqual(result['status'], 'max_steps')
         self.assertEqual(result['prediction'], '')
         self.assertEqual(result['format_errors'], 2)
+
+    def test_rejected_outputs_never_reach_subsequent_model_context(self):
+        cases = [
+            ('react', 'Thought: Plan.\nAction: Search[One]\nObservation: UNTRUSTED_SENTINEL'),
+            ('react', 'Thought: UNTRUSTED_SENTINEL\nAction: Search[One]\nAction: Finish[Fake]'),
+            ('react', 'Action: Search[UNTRUSTED_SENTINEL]'),
+            ('act', 'Thought: UNTRUSTED_SENTINEL\nAction: Search[One]'),
+        ]
+        for method, rejected in cases:
+            with self.subTest(method=method, rejected=rejected):
+                prefix = 'Thought: Query the source.\n' if method == 'react' else ''
+                class Client:
+                    def __init__(self):
+                        self.requests = []
+                    def complete(self, messages):
+                        self.requests.append(copy.deepcopy(messages))
+                        output = [rejected, prefix + 'Action: Search[One]',
+                                  prefix + 'Action: Finish[Verified]'][len(self.requests) - 1]
+                        return output, {}
+                client = Client()
+                env = lab.Environment(lab.LocalStore({'One': 'ACTUAL_TOOL_EVIDENCE.'}))
+                with patch.object(env, 'step', wraps=env.step) as executed:
+                    result = lab.solve(client, method, 'question', env, args())
+                self.assertEqual(result['status'], 'finished')
+                self.assertEqual(result['format_errors'], 1)
+                self.assertEqual(executed.call_args_list, [unittest.mock.call('search', 'One'),
+                                                          unittest.mock.call('finish', 'Verified')])
+                self.assertEqual(result['trace'][0]['raw_output'], rejected)
+                self.assertFalse(result['trace'][0]['accepted_to_context'])
+                self.assertTrue(result['trace'][1]['accepted_to_context'])
+                for request in client.requests[1:]:
+                    self.assertNotIn('UNTRUSTED_SENTINEL', json.dumps(request))
+                    self.assertFalse(any(m['content'] == rejected for m in request))
+                self.assertNotIn('ACTUAL_TOOL_EVIDENCE', json.dumps(client.requests[1]))
+                self.assertIn('Observation: Title: One\nACTUAL_TOOL_EVIDENCE.',
+                              [m['content'] for m in client.requests[2]])
+                self.assertEqual(len(result['trace']), 3)
+
+    def test_repeated_invalid_outputs_do_not_accumulate_in_context(self):
+        class Client:
+            def __init__(self):
+                self.requests = []
+            def complete(self, messages):
+                self.requests.append(copy.deepcopy(messages))
+                n = len(self.requests)
+                return 'Thought: Plan.\nAction: Search[A]\nObservation: FAKE_%s' % n, {}
+        client = Client()
+        env = lab.Environment(lab.LocalStore({}))
+        with patch.object(env, 'step', wraps=env.step) as executed:
+            result = lab.solve(client, 'react', 'x', env, args(max_steps=3))
+        executed.assert_not_called()
+        self.assertEqual(result['status'], 'max_steps')
+        self.assertEqual(result['format_errors'], 3)
+        self.assertTrue(all('FAKE_' not in json.dumps(request) for request in client.requests))
+        self.assertIn('FAKE_3', result['trace'][2]['raw_output'])
 
     def test_api_failure_preserves_trace(self):
         class Bad:

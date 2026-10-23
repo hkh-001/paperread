@@ -1,0 +1,31 @@
+﻿method,id,status,prediction,gold,em,f1,llm_calls,tool_calls,format_errors,seconds,prompt_tokens,completion_tokens
+cot,react-dev-01551,finished,Nanette Burstein,Nanette Burstein,1.0,1.0,1,0,0,2.146,126,33
+cot,react-dev-02544,finished,No,no,1.0,1.0,1,0,0,1.589,121,35
+cot,react-dev-06238,finished,Seth MacFarlane,Seth MacFarlane,1.0,1.0,1,0,0,1.633,122,33
+cot,react-dev-03522,finished,James Worthy,James Worthy,1.0,1.0,1,0,0,1.599,117,32
+cot,react-dev-03687,finished,The Double Life of Véronique,Beyond the Clouds,0.0,0.0,1,0,0,2.569,126,182
+cot,react-dev-05388,finished,Torpedoes,torpedoes,1.0,1.0,1,0,0,1.973,138,45
+cot,react-dev-01557,finished,goose,duck,0.0,0.0,1,0,0,2.04,134,54
+cot,react-dev-03824,finished,George H. W. Bush,Bill Clinton,0.0,0.0,1,0,0,1.947,134,34
+cot,react-dev-02866,finished,1931,1909,0.0,0.0,1,0,0,1.861,126,37
+cot,react-dev-05762,finished,Joint Chiefs of Staff,Joint Chiefs of Staff,1.0,1.0,1,0,0,1.905,122,31
+direct,react-dev-01551,finished,Sean Anders,Nanette Burstein,0.0,0.0,1,0,0,1.872,97,4
+direct,react-dev-02544,finished,No,no,1.0,1.0,1,0,0,1.596,92,3
+direct,react-dev-06238,finished,Seth MacFarlane,Seth MacFarlane,1.0,1.0,1,0,0,1.298,93,7
+direct,react-dev-03522,finished,James Worthy,James Worthy,1.0,1.0,1,0,0,1.738,88,5
+direct,react-dev-03687,finished,The Double Life of Véronique,Beyond the Clouds,0.0,0.0,1,0,0,1.736,97,9
+direct,react-dev-05388,finished,torpedo boats,torpedoes,0.0,0.0,1,0,0,1.59,109,5
+direct,react-dev-01557,finished,duck,duck,1.0,1.0,1,0,0,1.469,105,3
+direct,react-dev-03824,finished,Ronald Reagan,Bill Clinton,0.0,0.0,1,0,0,1.942,105,4
+direct,react-dev-02866,finished,1896,1909,0.0,0.0,1,0,0,1.73,97,5
+direct,react-dev-05762,finished,NATO Military Committee,Joint Chiefs of Staff,0.0,0.0,1,0,0,1.818,93,5
+react,react-dev-01551,finished,Nanette Burstein,Nanette Burstein,1.0,1.0,3,2,0,6.872,1327,75
+react,react-dev-02544,finished,No,no,1.0,1.0,4,2,1,9.273,1757,178
+react,react-dev-06238,tool_error,,Seth MacFarlane,0.0,0.0,2,1,1,9.663,586,158
+react,react-dev-03522,finished,James Worthy,James Worthy,1.0,1.0,5,3,1,12.794,2184,211
+react,react-dev-03687,tool_error,,Beyond the Clouds,0.0,0.0,7,6,1,24.369,3349,430
+react,react-dev-05388,finished,torpedoes,torpedoes,1.0,1.0,2,1,0,4.987,870,91
+react,react-dev-01557,max_steps,,duck,0.0,0.0,7,7,0,22.008,3877,210
+react,react-dev-03824,finished,Bill Clinton,Bill Clinton,1.0,1.0,4,2,1,10.165,1618,277
+react,react-dev-02866,finished,1931,1909,0.0,0.0,7,6,0,18.775,4567,251
+react,react-dev-05762,finished,Joint Chiefs of Staff,Joint Chiefs of Staff,1.0,1.0,3,2,0,7.263,1387,75
