@@ -22,7 +22,7 @@ tags:
   - 规划
   - 人机交互
 status: 已读
-reproduction_status: 计划中
+reproduction_status: 代码已准备，待真实模型实验
 date_read: null
 paper: "[[ReAct - Synergizing Reasoning and Acting in Language Models.pdf]]"
 ---
