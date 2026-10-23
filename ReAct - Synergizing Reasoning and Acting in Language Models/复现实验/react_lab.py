@@ -112,11 +112,16 @@ class ChatClient:
         self.token_field = os.environ.get('LLM_TOKEN_FIELD', 'max_completion_tokens')
         if self.token_field not in ('max_tokens', 'max_completion_tokens'):
             raise ValueError('LLM_TOKEN_FIELD must be max_tokens or max_completion_tokens')
+        self.thinking = os.environ.get('LLM_THINKING', '').strip()
+        if self.thinking not in ('', 'enabled', 'disabled'):
+            raise ValueError('LLM_THINKING must be enabled, disabled, or empty')
         self.args = args
 
     def complete(self, messages):
         payload = {'model': self.model, 'messages': messages,
                    self.token_field: self.args.max_tokens}
+        if self.thinking:
+            payload['thinking'] = {'type': self.thinking}
         if self.temperature is not None:
             payload['temperature'] = self.temperature
         response = request_json(self.base_url + '/chat/completions', payload,
@@ -384,7 +389,8 @@ def run(args):
               'model': 'scripted-mock' if args.mock else client.model,
               'base_url': None if args.mock else client.base_url,
               'temperature': None if args.mock else client.temperature,
-              'token_field': None if args.mock else client.token_field}
+              'token_field': None if args.mock else client.token_field,
+              'thinking': None if args.mock else client.thinking}
     out = Path(args.out).resolve()
     manifest_path = out / 'manifest.json'
     config_hash = digest(config)

@@ -127,7 +127,7 @@ class LabTests(unittest.TestCase):
         try:
             with patch.dict('os.environ', {'LLM_BASE_URL': 'http://127.0.0.1:%s/v1' % server.server_port,
                             'LLM_MODEL': 'local-test', 'LLM_API_KEY': 'not-a-real-key',
-                            'LLM_TOKEN_FIELD': 'max_completion_tokens', 'LLM_TEMPERATURE': 'omit'}):
+                            'LLM_TOKEN_FIELD': 'max_completion_tokens', 'LLM_TEMPERATURE': 'omit', 'LLM_THINKING': 'disabled'}):
                 client = lab.ChatClient(args())
                 output, meta = client.complete([{'role': 'user', 'content': 'hello'}])
             self.assertEqual(output, 'Final: Lumen')
@@ -135,6 +135,7 @@ class LabTests(unittest.TestCase):
             self.assertNotIn('temperature', received[0][1])
             self.assertEqual(received[0][1]['max_completion_tokens'], 1024)
             self.assertEqual(meta['usage']['prompt_tokens'], 10)
+            self.assertEqual(received[0][1]['thinking'], {'type': 'disabled'})
         finally:
             server.shutdown()
             server.server_close()
