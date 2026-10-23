@@ -1,0 +1,11 @@
+﻿method,id,status,prediction,gold,em,f1,llm_calls,tool_calls,format_errors,seconds,prompt_tokens,completion_tokens
+react,react-dev-01551,finished,Nanette Burstein,Nanette Burstein,1.0,1.0,3,2,0,6.833,1327,75
+react,react-dev-02544,finished,No,no,1.0,1.0,4,2,1,9.605,1757,174
+react,react-dev-06238,finished,"Seth MacFarlane, Mike Barker and Matt Weitzman",Seth MacFarlane,0.0,0.4444444444444445,4,2,1,10.981,1701,205
+react,react-dev-03522,finished,James Worthy,James Worthy,1.0,1.0,5,3,1,12.183,2192,219
+react,react-dev-03687,max_steps,,Beyond the Clouds,0.0,0.0,7,7,0,24.417,3807,190
+react,react-dev-05388,finished,torpedoes,torpedoes,1.0,1.0,2,1,0,4.735,870,91
+react,react-dev-01557,max_steps,,duck,0.0,0.0,7,7,0,25.816,3797,191
+react,react-dev-03824,finished,Bill Clinton,Bill Clinton,1.0,1.0,4,2,1,10.781,1618,275
+react,react-dev-02866,finished,1931,1909,0.0,0.0,5,4,0,13.2,2607,156
+react,react-dev-05762,finished,Joint Chiefs of Staff,Joint Chiefs of Staff,1.0,1.0,3,2,0,7.005,1387,75
