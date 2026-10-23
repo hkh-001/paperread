@@ -21,8 +21,9 @@ tags:
   - 工具使用
   - 规划
   - 人机交互
-status: 精读
-date_read: 2026-10-22
+status: 已读
+reproduction_status: 计划中
+date_read: null
 paper: "[[ReAct - Synergizing Reasoning and Acting in Language Models.pdf]]"
 ---
 

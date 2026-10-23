@@ -21,8 +21,8 @@ tags:
   - 检索评测
   - 时间推理
   - 个性化
-status: 精读
-date_read: 2026-10-23
+status: 待阅读
+date_read: null
 paper: "[[LongMemEval - Benchmarking Chat Assistants on Long-Term Interactive Memory.pdf]]"
 ---
 

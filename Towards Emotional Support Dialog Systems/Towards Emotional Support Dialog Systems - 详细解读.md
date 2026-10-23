@@ -24,8 +24,8 @@ tags:
   - 多轮交互
   - 策略规划
   - 人机交互
-status: 精读
-date_read: 2026-10-23
+status: 待阅读
+date_read: null
 paper: "[[Towards Emotional Support Dialog Systems.pdf]]"
 ---
 

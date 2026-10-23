@@ -22,7 +22,8 @@ venue: Frontiers of Computer Science
 paper_type: Survey
 doi: 10.1007/s11704-024-40231-1
 arxiv: 2308.11432
-status: reading
+date_read: null
+status: 已读
 tags:
   - paper-reading
   - llm-agent

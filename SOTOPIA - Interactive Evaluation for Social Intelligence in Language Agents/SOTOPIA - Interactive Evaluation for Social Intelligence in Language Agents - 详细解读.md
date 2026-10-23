@@ -26,8 +26,8 @@ tags:
   - 交互评测
   - LLM-as-a-Judge
   - 人机交互
-status: 精读
-date_read: 2026-10-23
+status: 待阅读
+date_read: null
 paper: "[[SOTOPIA - Interactive Evaluation for Social Intelligence in Language Agents.pdf]]"
 ---
 

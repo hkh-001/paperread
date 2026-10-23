@@ -21,8 +21,8 @@ tags:
   - 遗忘曲线
   - 情感陪伴
   - RAG
-status: 精读
-date_read: 2026-10-23
+status: 待阅读
+date_read: null
 paper: "[[MemoryBank - Enhancing Large Language Models with Long-Term Memory.pdf]]"
 ---
 
