@@ -1,0 +1,12 @@
+{
+  "retrieval_sha256": "d029d849bed046a1af302595c178fb655703009fdd450cf4786573b356991224",
+  "runner_sha256": "7729018e7e8ee25cae6bdb428b04bf685d18e722702d8f05b9bc5f97b8b9cdec",
+  "validator_sha256": "d678bf82fb0aaadcff31c1a0af1acc0e7d9a15af691f99345f9df71044879ef8",
+  "defaults": {
+    "interval": 1.5,
+    "retries": 3,
+    "query_budget": 90,
+    "shared_ttl": 604800
+  },
+  "tests_passed": 24
+}

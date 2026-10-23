@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-23T09:48:02.183376+00:00",
+  "no_model_calls": true,
+  "queries": [
+    {
+      "query": "Stuart Bird film director",
+      "transport_ok": true,
+      "matched_title": null,
+      "text_length": 0,
+      "candidate_message": "Entity not found. Similar titles: [\"White Bird (film)\", \"The Angry Birds Movie\", \"Stuart Stone\", \"The Angry Birds Movie 2\", \"Stuart Little 2\"]"
+    },
+    {
+      "query": "Stuart Baird filmography",
+      "transport_ok": true,
+      "matched_title": null,
+      "text_length": 0,
+      "candidate_message": "Entity not found. Similar titles: [\"Stuart Baird\", \"Rebecca Romijn\", \"Jim and John Thomas\", \"Martin Walsh (film editor)\", \"Vald\\u00eds \\u00d3skarsd\\u00f3ttir\"]"
+    },
+    {
+      "query": "Wendy Schaal",
+      "transport_ok": true,
+      "matched_title": "Wendy Schaal",
+      "text_length": 2934,
+      "candidate_message": null
+    }
+  ],
+  "second_session": [
+    {
+      "query": "Stuart Bird film director",
+      "cache_only_ok": true
+    },
+    {
+      "query": "Stuart Baird filmography",
+      "cache_only_ok": true
+    },
+    {
+      "query": "Wendy Schaal",
+      "cache_only_ok": true
+    }
+  ],
+  "cold_attempts": 5,
+  "cold_429": 0,
+  "cold_wait_seconds": 2.124,
+  "second_session_network_attempts": 0,
+  "shared_cache_hits": 5
+}

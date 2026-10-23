@@ -136,7 +136,7 @@ class LabTests(unittest.TestCase):
         payload = {'query': {'pages': [{'title': 'Example', 'extract': 'First. Second.'}]}}
         with tempfile.TemporaryDirectory() as tmp:
             store = lab.WikiStore(tmp, 3, 0)
-            with patch.object(lab, 'request_json', return_value=payload) as request:
+            with patch('retrieval.Transport.get', return_value=payload) as request:
                 self.assertEqual(store.search('Example')[:2], ('Example', 'First. Second.'))
                 store.search('Example')
                 self.assertEqual(request.call_count, 1)
@@ -160,6 +160,16 @@ class LabTests(unittest.TestCase):
                     lab.run(config)
                 self.assertTrue((out / 'results.csv').exists())
                 self.assertIn('MOCK', (out / 'summary.md').read_text())
+                audit = [{'kind': 'attempt', 'attempt': 1, 'code': 429},
+                         {'kind': 'wait', 'seconds': 8},
+                         {'kind': 'attempt', 'attempt': 2, 'outcome': 'success'},
+                         {'kind': 'cache_hit', 'tier': 'shared'}]
+                (out / 'retrieval.jsonl').write_text('\n'.join(json.dumps(e) for e in audit) + '\n{broken')
+                lab.report(out)
+                stats = lab.read_json(out / 'retrieval_summary.json')
+                self.assertEqual(stats, {'network_attempts': 2, 'http_429': 1, 'retry_attempts': 1,
+                                        'cache_hits': 1, 'wait_seconds': 8, 'incomplete_log_lines': 1})
+
                 src, dest = Path(tmp) / 'source.json', Path(tmp) / 'subset.json'
                 lab.write_json(src, [{'_id': 'id', 'question': 'q', 'answer': 'gold',
                                       'context': [['secret evidence']], 'supporting_facts': [['secret', 0]]}])

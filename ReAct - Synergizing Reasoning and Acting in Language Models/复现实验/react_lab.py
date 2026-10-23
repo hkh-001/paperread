@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """ReAct learning lab. Python 3.9+, standard library only; see 教程.md."""
 import argparse
+import math
+from retrieval import WikiStore
 import collections
 import csv
 import datetime
@@ -166,33 +168,6 @@ class LocalStore:
         return None, '', 'Entity not found. Similar titles: ' + json.dumps(suggestions)
 
 
-class WikiStore:
-    def __init__(self, cache, timeout, retries):
-        self.cache, self.timeout, self.retries = Path(cache), timeout, retries
-        self.cache.mkdir(parents=True, exist_ok=True)
-
-    def query(self, params):
-        url = 'https://en.wikipedia.org/w/api.php?' + urllib.parse.urlencode(dict(format='json', formatversion=2, **params))
-        path = self.cache / (hashlib.sha256(url.encode()).hexdigest() + '.json')
-        if path.exists():
-            return read_json(path)
-        response = request_json(url, timeout=self.timeout, retries=self.retries)
-        if 'error' in response:
-            raise RuntimeError('Wikipedia API error')
-        write_json(path, {'requested_url': url, 'fetched_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                          'response': response})
-        return read_json(path)
-
-    def search(self, entity):
-        result = self.query({'action': 'query', 'prop': 'extracts|info', 'inprop': 'url',
-                             'explaintext': 1, 'redirects': 1, 'titles': entity})['response']
-        pages = result.get('query', {}).get('pages', [])
-        if pages and 'missing' not in pages[0] and pages[0].get('extract'):
-            page = pages[0]
-            return page['title'], page['extract'], None
-        result = self.query({'action': 'query', 'list': 'search', 'srsearch': entity, 'srlimit': 5})['response']
-        titles = [r['title'] for r in result.get('query', {}).get('search', [])]
-        return None, '', 'Entity not found. Similar titles: ' + json.dumps(titles)
 
 
 def sentences(text):
@@ -287,6 +262,7 @@ def solve(client, method, question, env, args):
             continue
         event['accepted_to_context'] = True
         messages.append({'role': 'assistant', 'content': text})
+        retrieval_start = len(getattr(env.store, 'events', []))
         try:
             observation, done = env.step(name, value)
         except Exception as exc:
@@ -294,6 +270,9 @@ def solve(client, method, question, env, args):
             trace.append(event)
             status = 'tool_error'
             break
+        finally:
+            if hasattr(env.store, 'events'):
+                event['retrieval_events'] = env.store.events[retrieval_start:]
         event['observation'] = observation
         event['page_title'] = env.title
         trace.append(event)
@@ -364,6 +343,26 @@ def report(out):
     lines += ['', '各组尚未跑完同一批题目时，不进行方法优劣比较。', '',
               '完整轨迹见 records/；逐题表格见 results.csv；配置和题目顺序见 manifest.json。',
               'prompt_tokens/completion_tokens 来自服务返回，缺失时按 0 汇总，不代表免费；没有推算费用。', '']
+    audit = out / 'retrieval.jsonl'
+    if audit.exists():
+        events, incomplete = [], 0
+        for line in audit.read_text(encoding='utf-8').splitlines():
+            try:
+                events.append(json.loads(line))
+            except json.JSONDecodeError:
+                incomplete += 1
+        retrieval_stats = {
+            'network_attempts': sum(e.get('kind') == 'attempt' for e in events),
+            'http_429': sum(e.get('kind') == 'attempt' and e.get('code') == 429 for e in events),
+            'retry_attempts': sum(e.get('kind') == 'attempt' and e.get('attempt', 1) > 1 for e in events),
+            'cache_hits': sum(e.get('kind') == 'cache_hit' for e in events),
+            'wait_seconds': round(sum(e.get('seconds', 0) for e in events if e.get('kind') == 'wait'), 3),
+            'incomplete_log_lines': incomplete}
+        write_json(out / 'retrieval_summary.json', retrieval_stats)
+        lines += ['', '检索审计（含续跑期间的日志）：', '',
+                  'HTTP 尝试 {network_attempts} 次；额外重试 {retry_attempts} 次；429 {http_429} 次；缓存命中 {cache_hits} 次；等待 {wait_seconds} 秒。'.format(**retrieval_stats),
+                  '实际事件见 retrieval.jsonl；逐步重试和缓存事件也保存在每题 trace 的 retrieval_events。',
+                  '不完整日志行：%s。统计仅覆盖已写入事件；意外中断时不能保证记录了所有已发请求。' % incomplete, '']
     (out / 'summary.md').write_text('\n'.join(lines), encoding='utf-8')
     write_json(out / 'summary.json', summary)
     print('\n'.join(lines))
@@ -393,7 +392,13 @@ def run(args):
               'base_url': None if args.mock else client.base_url,
               'temperature': None if args.mock else client.temperature,
               'token_field': None if args.mock else client.token_field,
-              'thinking': None if args.mock else client.thinking}
+              'thinking': None if args.mock else client.thinking,
+              'retrieval': {'interval': getattr(args, 'wiki_interval', 1.5),
+                            'retries': getattr(args, 'wiki_retries', 3),
+                            'budget': getattr(args, 'wiki_budget', 90.),
+                            'cache_ttl': getattr(args, 'wiki_cache_ttl', 604800.),
+                            'shared_cache': str(Path(getattr(args, 'wiki_cache', 'cache/wiki')).resolve()),
+                            'module_sha256': hashlib.sha256((ROOT / 'retrieval.py').read_bytes()).hexdigest()}}
     out = Path(args.out).resolve()
     manifest_path = out / 'manifest.json'
     config_hash = digest(config)
@@ -411,7 +416,10 @@ def run(args):
                                      started_at=datetime.datetime.now(datetime.timezone.utc).isoformat()))
     records = out / 'records'
     records.mkdir(exist_ok=True)
-    store = LocalStore(docs) if args.env == 'local' else WikiStore(out / 'wiki_cache', args.timeout, args.retries)
+    store = LocalStore(docs) if args.env == 'local' else WikiStore(out / 'wiki_cache', args.timeout, getattr(args, 'wiki_retries', 3),
+            shared_cache=getattr(args, 'wiki_cache', 'cache/wiki'), interval=getattr(args, 'wiki_interval', 1.5),
+            budget=getattr(args, 'wiki_budget', 90.), ttl=getattr(args, 'wiki_cache_ttl', 604800.),
+            audit=out / 'retrieval.jsonl')
     try:
         for item in selected:
             for method in args.methods:
@@ -490,6 +498,20 @@ def nonnegative(value):
     return number
 
 
+def finite_nonnegative(value):
+    number = float(value)
+    if not math.isfinite(number) or number < 0:
+        raise argparse.ArgumentTypeError('must be finite and nonnegative')
+    return number
+
+
+def finite_positive(value):
+    number = finite_nonnegative(value)
+    if number == 0:
+        raise argparse.ArgumentTypeError('must be positive')
+    return number
+
+
 def main():
     os.chdir(ROOT)
     load_env(ROOT / '.env')
@@ -508,6 +530,11 @@ def main():
     p.add_argument('--obs-chars', type=positive, default=4000)
     p.add_argument('--timeout', type=positive, default=60)
     p.add_argument('--retries', type=nonnegative, default=2)
+    p.add_argument('--wiki-interval', type=finite_nonnegative, default=1.5)
+    p.add_argument('--wiki-retries', type=nonnegative, default=3)
+    p.add_argument('--wiki-budget', type=finite_positive, default=90.)
+    p.add_argument('--wiki-cache', default='cache/wiki')
+    p.add_argument('--wiki-cache-ttl', type=finite_nonnegative, default=604800.)
     p.add_argument('--out', required=True)
     p.add_argument('--resume', action='store_true')
     p.add_argument('--mock', action='store_true')

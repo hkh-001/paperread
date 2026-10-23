@@ -8,3 +8,4 @@ runs/
 data/hotpot*.json*
 data/dev*.json*
 data/eval*.json*
+cache/
