@@ -21,11 +21,6 @@
 | [SOTOPIA - Interactive Evaluation for Social Intelligence in Language Agents](SOTOPIA%20-%20Interactive%20Evaluation%20for%20Social%20Intelligence%20in%20Language%20Agents/SOTOPIA%20-%20Interactive%20Evaluation%20for%20Social%20Intelligence%20in%20Language%20Agents%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 待阅读 | — |
 | [Towards Emotional Support Dialog Systems](Towards%20Emotional%20Support%20Dialog%20Systems/Towards%20Emotional%20Support%20Dialog%20Systems%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 待阅读 | — |
 
-## 下一步：ReAct 简单复现
-
-见 [复现计划与记录](ReAct%20-%20Synergizing%20Reasoning%20and%20Acting%20in%20Language%20Models/%E5%A4%8D%E7%8E%B0%E8%AE%A1%E5%88%92%E4%B8%8E%E8%AE%B0%E5%BD%95.md).
-当前只记录计划，尚无实现或实验结果。
-
 ## 如何记录阅读过程
 
 1. 阅读后更新笔记的 `status` 与实际 `date_read`，补充自己的理解和疑问。
