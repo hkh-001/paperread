@@ -1,0 +1,91 @@
+﻿n,id,method,status,prediction,gold,em,f1,review_note
+1,react-dev-03265,cot,finished,Everglades National Park and Biscayne National Park,Biscayne National Park to the east and Everglades National Park to the west,0.0,0.7777777777777778,本题存在表达/范围审查点，具体预测仍需独立检查
+1,react-dev-03265,direct,finished,Everglades National Park and Biscayne National Park,Biscayne National Park to the east and Everglades National Park to the west,0.0,0.7777777777777778,本题存在表达/范围审查点，具体预测仍需独立检查
+1,react-dev-03265,react,finished,Everglades National Park and Biscayne National Park,Biscayne National Park to the east and Everglades National Park to the west,0.0,0.7777777777777778,表达或答案范围差异
+2,react-dev-07174,cot,finished,Steve Nallon,Stephen John Coogan,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+2,react-dev-07174,direct,finished,John Cooper Clarke,Stephen John Coogan,0.0,0.3333333333333333,未精确匹配；不据单次无工具回答推断内部错误原因
+2,react-dev-07174,react,max_steps,,Stephen John Coogan,0.0,0.0,步数耗尽，未提交
+3,react-dev-02927,cot,finished,Unknown,Bandai,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+3,react-dev-02927,direct,finished,Japan,Bandai,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+3,react-dev-02927,react,max_steps,,Bandai,0.0,0.0,步数耗尽，未提交
+4,react-dev-03618,cot,finished,They reject them as unbiblical and scientifically incorrect.,a compromise on biblical inerrancy,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+4,react-dev-03618,direct,finished,"They reject evolution and accept biblical creation, holding that all things were created by God in six literal days.",a compromise on biblical inerrancy,0.0,0.08695652173913043,未精确匹配；不据单次无工具回答推断内部错误原因
+4,react-dev-03618,react,finished,"It believes in the inerrancy of the Bible and a literal interpretation of the Book of Genesis, including events such as Noah's Flood.",a compromise on biblical inerrancy,0.0,0.08695652173913043,题意、关系或证据误读
+5,react-dev-06432,cot,finished,Academy Award for Best Supporting Actor,Academy Award,0.0,0.5,未精确匹配；不据单次无工具回答推断内部错误原因
+5,react-dev-06432,react,max_steps,,Academy Award,0.0,0.0,步数耗尽，未提交
+6,react-dev-04525,cot,finished,Protestantism (the Church of England),Roman Catholicism,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+6,react-dev-04525,direct,finished,The Church,Roman Catholicism,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+6,react-dev-04525,react,finished,Protestantism,Roman Catholicism,0.0,0.0,题意、关系或证据误读
+7,react-dev-00457,cot,finished,Freyja — associated with the Brísingamen tale and the search for Óðr in the Eddas,"various deities, beings, and heroes",0.0,0.11764705882352941,未精确匹配；不据单次无工具回答推断内部错误原因
+7,react-dev-00457,direct,finished,Norse mythology tales,"various deities, beings, and heroes",0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+7,react-dev-00457,react,finished,"Frigg is associated with the goddesses Fulla, Lofn, Hlín, and Gná (and ambiguously with Jörð/Earth); the surviving tales about her come mainly from Norse mythology sources such as the Prose Edda and Poetic Edda.","various deities, beings, and heroes",0.0,0.05555555555555555,题意、关系或证据误读
+9,react-dev-03188,cot,finished,Georgia College & State University,A Scholar Under Siege,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+9,react-dev-03188,direct,finished,Georgia College & State University,A Scholar Under Siege,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+9,react-dev-03188,react,finished,Georgia Southern University,A Scholar Under Siege,0.0,0.0,题面与答案类型冲突
+11,react-dev-00690,direct,finished,Arizona Wildcats,Arizona State Sun Devils,0.0,0.3333333333333333,未精确匹配；不据单次无工具回答推断内部错误原因
+12,react-dev-02053,cot,finished,Melbourne Cricket Ground,Princes Park,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+13,react-dev-01439,cot,finished,"Boston, New York City, Philadelphia, Baltimore, and Washington, D.C.","Boston, Providence, Hartford, New York City, Philadelphia, Wilmington, Baltimore, and Washington, D.C.",0.0,0.8571428571428571,未精确匹配；不据单次无工具回答推断内部错误原因
+13,react-dev-01439,direct,finished,"Boston, New York City, Philadelphia, Baltimore, and Washington, D.C.","Boston, Providence, Hartford, New York City, Philadelphia, Wilmington, Baltimore, and Washington, D.C.",0.0,0.8571428571428571,未精确匹配；不据单次无工具回答推断内部错误原因
+13,react-dev-01439,react,max_steps,,"Boston, Providence, Hartford, New York City, Philadelphia, Wilmington, Baltimore, and Washington, D.C.",0.0,0.0,步数耗尽，未提交
+15,react-dev-04678,cot,finished,"330,000","322,421 personnel on active duty",0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+15,react-dev-04678,direct,finished,"329,614","322,421 personnel on active duty",0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+15,react-dev-04678,react,finished,"336,978","322,421 personnel on active duty",0.0,0.0,实时与标注数值差异
+16,react-dev-04237,direct,finished,1969,1967,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+19,react-dev-02825,cot,finished,Psych,Psych is an American detective comedy-drama,0.0,0.33333333333333337,本题存在表达/范围审查点，具体预测仍需独立检查
+19,react-dev-02825,direct,finished,Psych,Psych is an American detective comedy-drama,0.0,0.33333333333333337,本题存在表达/范围审查点，具体预测仍需独立检查
+19,react-dev-02825,react,finished,Psych,Psych is an American detective comedy-drama,0.0,0.33333333333333337,表达或答案范围差异
+20,react-dev-03446,cot,finished,Kansas,The 2008 Kansas Jayhawks,0.0,0.5,本题存在表达/范围审查点，具体预测仍需独立检查
+20,react-dev-03446,direct,finished,Kansas Jayhawks,The 2008 Kansas Jayhawks,0.0,0.8,本题存在表达/范围审查点，具体预测仍需独立检查
+20,react-dev-03446,react,finished,Kansas Jayhawks,The 2008 Kansas Jayhawks,0.0,0.8,表达或答案范围差异
+21,react-dev-04739,cot,finished,Marianas Trench,Art of Dying,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+21,react-dev-04739,direct,finished,Marianas Trench,Art of Dying,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+22,react-dev-03511,direct,finished,Vanderbilt University,Emory University.,0.0,0.5,未精确匹配；不据单次无工具回答推断内部错误原因
+24,react-dev-03805,cot,finished,3,three official languages,0.0,0.0,本题存在表达/范围审查点，具体预测仍需独立检查
+24,react-dev-03805,direct,finished,3,three official languages,0.0,0.0,本题存在表达/范围审查点，具体预测仍需独立检查
+24,react-dev-03805,react,finished,3,three official languages,0.0,0.0,表达或答案范围差异
+26,react-dev-06414,cot,finished,Lime juice,lime,0.0,0.6666666666666666,本题存在表达/范围审查点，具体预测仍需独立检查
+26,react-dev-06414,direct,finished,Lime juice,lime,0.0,0.6666666666666666,本题存在表达/范围审查点，具体预测仍需独立检查
+26,react-dev-06414,react,finished,lime juice,lime,0.0,0.6666666666666666,表达或答案范围差异
+28,react-dev-00851,cot,finished,ANA Holdings,All Nippon,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+28,react-dev-00851,direct,finished,Vanilla Air,All Nippon,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+28,react-dev-00851,react,max_steps,,All Nippon,0.0,0.0,步数耗尽，未提交
+30,react-dev-06849,cot,format_error,,July 25 to August 4,0.0,0.0,协议/格式失败：同一响应包含两条 Final
+30,react-dev-06849,direct,finished,20–30 July 2017,July 25 to August 4,0.0,0.25,未精确匹配；不据单次无工具回答推断内部错误原因
+30,react-dev-06849,react,max_steps,,July 25 to August 4,0.0,0.0,步数耗尽，未提交
+31,react-dev-01720,cot,finished,Jaret,Marie,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+31,react-dev-01720,direct,finished,Jane,Marie,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+31,react-dev-01720,react,max_steps,,Marie,0.0,0.0,步数耗尽，未提交
+32,react-dev-06709,cot,finished,The Revolutionary Tribunal,La mamma morta,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+32,react-dev-06709,direct,finished,Act III,La mamma morta,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+32,react-dev-06709,react,max_steps,,La mamma morta,0.0,0.0,步数耗尽，未提交
+33,react-dev-01885,cot,finished,Aubrey Plaza,Nick Offerman,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+33,react-dev-01885,direct,finished,Rashida Jones,Nick Offerman,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+35,react-dev-04050,direct,finished,American,Israeli-American,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+36,react-dev-03395,cot,finished,"Shoshone, French, and English",French and English,0.0,0.8571428571428571,本题存在表达/范围审查点，具体预测仍需独立检查
+36,react-dev-03395,direct,finished,Shoshone and English,French and English,0.0,0.6666666666666666,本题存在表达/范围审查点，具体预测仍需独立检查
+36,react-dev-03395,react,finished,"English, German, French, and Spanish",French and English,0.0,0.7499999999999999,表达或答案范围差异
+39,react-dev-04330,cot,finished,Brotherly Leader and Guide of the Revolution,"""Brotherly Leader"" of the Great Socialist People's Libyan Arab Jamahiriya",0.0,0.4,本题存在表达/范围审查点，具体预测仍需独立检查
+39,react-dev-04330,direct,finished,Brotherly Leader and Guide of the Revolution,"""Brotherly Leader"" of the Great Socialist People's Libyan Arab Jamahiriya",0.0,0.4,本题存在表达/范围审查点，具体预测仍需独立检查
+39,react-dev-04330,react,finished,Brotherly Leader,"""Brotherly Leader"" of the Great Socialist People's Libyan Arab Jamahiriya",0.0,0.3636363636363636,表达或答案范围差异
+40,react-dev-05503,cot,finished,"Modernist, traditionalist, and reformist Islamic schools of thought",postmodern schools of thought,0.0,0.5,未精确匹配；不据单次无工具回答推断内部错误原因
+40,react-dev-05503,direct,finished,Not applicable — Hafiz Rashid Khan is not a recognized academic figure with an established discipline or schools of thought.,postmodern schools of thought,0.0,0.27272727272727276,未精确匹配；不据单次无工具回答推断内部错误原因
+40,react-dev-05503,react,finished,critical theory and cultural studies,postmodern schools of thought,0.0,0.0,题意、关系或证据误读
+41,react-dev-02811,cot,finished,5 million,1.5 million households,0.0,0.4,未精确匹配；不据单次无工具回答推断内部错误原因
+41,react-dev-02811,direct,finished,5.5 million,1.5 million households,0.0,0.4,未精确匹配；不据单次无工具回答推断内部错误原因
+41,react-dev-02811,react,max_steps,,1.5 million households,0.0,0.0,步数耗尽，未提交
+42,react-dev-01320,cot,finished,Andrew Preston,James Taylor,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+42,react-dev-01320,react,finished,Andrew Preston,James Taylor,0.0,0.0,同名实体选错
+43,react-dev-02609,cot,finished,Tiffany & Co.,Tiffany's,0.0,0.0,本题存在表达/范围审查点，具体预测仍需独立检查
+43,react-dev-02609,direct,finished,Tiffany & Co.,Tiffany's,0.0,0.0,本题存在表达/范围审查点，具体预测仍需独立检查
+43,react-dev-02609,react,finished,Tiffany & Co.,Tiffany's,0.0,0.0,表达或答案范围差异
+45,react-dev-04152,cot,finished,Chicago (West Chatham) — not New York,Harlem,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+45,react-dev-04152,direct,finished,Brooklyn,Harlem,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+45,react-dev-04152,react,max_steps,,Harlem,0.0,0.0,步数耗尽，未提交
+48,react-dev-01560,cot,finished,"143,229","143,007",0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+48,react-dev-01560,direct,finished,"72,516","143,007",0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+48,react-dev-01560,react,finished,"143,229","143,007",0.0,0.0,实时与标注数值差异
+49,react-dev-06916,cot,finished,dice,a pair of dice,0.0,0.5,本题存在表达/范围审查点，具体预测仍需独立检查
+49,react-dev-06916,direct,finished,dice,a pair of dice,0.0,0.5,本题存在表达/范围审查点，具体预测仍需独立检查
+49,react-dev-06916,react,finished,dice,a pair of dice,0.0,0.5,表达或答案范围差异
+50,react-dev-05679,cot,finished,France,Switzerland,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因
+50,react-dev-05679,direct,finished,Indonesia,Switzerland,0.0,0.0,未精确匹配；不据单次无工具回答推断内部错误原因

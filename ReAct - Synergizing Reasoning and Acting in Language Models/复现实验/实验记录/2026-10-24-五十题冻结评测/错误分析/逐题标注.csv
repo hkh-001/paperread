@@ -1,0 +1,51 @@
+﻿n,id,primary,secondary,status,gold,prediction,confidence,observation_and_interpretation
+1,react-dev-03265,表达或答案范围差异,预测集合一致；缺少方位；证据未完全核验,finished,Biscayne National Park to the east and Everglades National Park to the west,Everglades National Park and Biscayne National Park,高,预测与参考包含相同两座国家公园，但顺序不同且省略 east/west 方位。原题问哪两座公园，并未明确要求方位，因此 EM=0 不等于公园名字错误。实际轨迹未查到 Homestead 的完整标注句，证据核验仍有欠缺。
+2,react-dev-07174,步数耗尽，未提交,协议损耗；页面重定向；工具状态误用,max_steps,Stephen John Coogan,,高,7 次调用中前 3 次因模型自行生成 Observation 被拒绝。真实查询纪录片标题重定向到人物页，未取得标注中的 Steve Coogan 证据；第 7 步在前次搜索未命中后执行 Lookup，返回 No current page。题面 Splitting Image 与标注 Spitting Image 的拼写也不同。
+3,react-dev-02927,步数耗尽，未提交,题意歧义；实体偏航；查询未命中,max_steps,Bandai,,高,Princess Max 查询未命中后，模型依据候选偏向 Leapster/L-MAX，未找到标注的 Princess Max → Tamagotchi → Bandai 链。题目问 Where，参考答案却是发行商 Bandai，存在地点与机构类型歧义；不能将全部失败归因于搜索策略。
+4,react-dev-03618,题意、关系或证据误读,机构链偏离；问答关系误读；证据不足,finished,a compromise on biblical inerrancy,"It believes in the inerrancy of the Bible and a literal interpretation of the Book of Genesis, including events such as Noah's Flood.",高,模型沿 Carl Wieland → CMI → young Earth creationism，回答组织自身相信什么；标注沿 Carl Wieland → Answers in Genesis，要求说明其如何评价其他观点（compromise on biblical inerrancy）。存在机构对应和关系目标两处偏离。
+5,react-dev-06432,步数耗尽，未提交,证据已出现未停止；附加约束；协议损耗,max_steps,Academy Award,,高,第 4 步 Gary Sinise 的真实摘要已说明 born 1955 和 nominated for an Academy Award，第 5 步再次确认。模型第 6 步却增加“必须与 Ransom 角色绑定的具体提名”这一约束，继续查找并耗尽预算。原题只以 Ransom 识别演员，没有要求提名来自该片。
+6,react-dev-04525,题意、关系或证据误读,关系方向错误；证据不足,finished,Roman Catholicism,Protestantism,高,模型 Lookup objection 没有结果，仍由“反对建制教会”推到 Protestantism。原始支持链为 Ranters 属 radical Protestants，再接 Protestantism 与 Roman Catholic Church 的改革关系。它把所属阵营/类别和题目要求的反对对象混淆；该解释限于本题标注链，不代替完整历史考证。
+7,react-dev-00457,题意、关系或证据误读,题意不清；目标关系偏离,finished,"various deities, beings, and heroes","Frigg is associated with the goddesses Fulla, Lofn, Hlín, and Gná (and ambiguously with Jörð/Earth); the surviving tales about her come mainly from Norse mythology sources such as the Prose Edda and Poetic Edda.",高,题面语法含混。模型回答 Frigg 关联哪些女神与来源书籍；原标注是 Hlín → Norse mythology → tales of various deities/beings/heroes。模型没有走到 mythology consists of tales 的目标关系。
+8,react-dev-00909,EM通过,,finished,yes,Yes,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+9,react-dev-03188,题面与答案类型冲突,题目答案类型冲突,finished,A Scholar Under Siege,Georgia Southern University,高,题面问 what Georgia college，模型答 Georgia Southern University；真实段落与原标注都支持该大学与作品的关系。参考答案却是歌剧 A Scholar Under Siege。这里应标注问句要求的学校与参考作品类型不一致，不能直接判模型选错学校。
+10,react-dev-00919,EM通过,,finished,Father Dougal McGuire,Father Dougal McGuire,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+11,react-dev-00690,EM通过,,finished,Arizona State Sun Devils,Arizona State Sun Devils,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+12,react-dev-02053,EM通过,,finished,Princes Park,Princes Park,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+13,react-dev-01439,步数耗尽，未提交,列表定位；工具状态误用,max_steps,"Boston, Providence, Hartford, New York City, Philadelphia, Wilmington, Baltimore, and Washington, D.C.",,高,模型找到了 Northeast megalopolis，但数次 Lookup 未取得完整列表；失败 Search 清空当前页，第 5 步 Lookup 返回 No current page。第 7 步实际观察仅列五个都市区，仍未提交；原标注列八座城市。
+14,react-dev-00156,EM通过,,finished,The Seven Days Battles,Seven Days Battles,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+15,react-dev-04678,实时与标注数值差异,实时数值与旧段落冲突,finished,"322,421 personnel on active duty","336,978",高,"模型先识别 US Navy，真实 Lookup 返回 336,978 active duty，最终如实输出该数字；原标注段落为 322,421。确认的是两份证据数值冲突，尚未核对各自统计日期或口径，不能声称当前值必然更正确。"
+16,react-dev-04237,EM通过,,finished,1967,1967,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+17,react-dev-01534,EM通过,,finished,San Marco,San Marco,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+18,react-dev-04679,EM通过,,finished,no,No,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+19,react-dev-02825,表达或答案范围差异,名称与整句抽取,finished,Psych is an American detective comedy-drama,Psych,高,模型答 Psych，参考答案为 Psych is an American detective comedy-drama。原始支持句与真实工具结果均指向同一剧名。属于清晰的实体名与长抽取片段差异，不是找错电视剧。
+20,react-dev-03446,表达或答案范围差异,赛季限定缺失；特定胜负未充分核验,finished,The 2008 Kansas Jayhawks,Kansas Jayhawks,高,模型答 Kansas Jayhawks，参考是 The 2008 Kansas Jayhawks。球队实体一致但缺少年份；实际轨迹仅验证两队存在 rivalry，没有查证 2008 场次胜负，因此不能把它直接当成完全等价答案。
+21,react-dev-04739,EM通过,,finished,Art of Dying,Art of Dying,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+22,react-dev-03511,EM通过,,finished,Emory University.,Emory University,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+23,react-dev-06102,EM通过,,finished,yes,Yes,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+24,react-dev-03805,表达或答案范围差异,数字与文字,finished,three official languages,3,高,3 与 three official languages 的数量一致。原始 Luxembourg 支持句明确为三种官方语言。真实轨迹只查看首段后凭已知信息回答，没有在返回摘要中直接展示语言句；评分表达差异与证据覆盖应分别看待。
+25,react-dev-05123,EM通过,,finished,House of Habsburg-Lorraine,House of Habsburg-Lorraine,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+26,react-dev-06414,表达或答案范围差异,食材粒度差异,finished,lime,lime juice,高,模型基于真实配方摘要答 lime juice；参考 lime，原始两段分别使用 lime juice 和 lime。主题一致，但水果与果汁不是严格同一字符串，应作粒度人工审查，不能制定随意去词规则自动补分。
+27,react-dev-07026,EM通过,,finished,Ngadi Chuli,Ngadi Chuli,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+28,react-dev-00851,步数耗尽，未提交,资料版本差异；候选偏航；协议损耗,max_steps,All Nippon,,高,原始 Value Alliance 支持段落含 Vanilla Air，实际返回的较新成员列表未含它。模型逐个检查 Scoot/Cebu Pacific/Jeju/Nok/Cebgo，未走到 Vanilla Air → All Nippon 的标注链。既有候选偏航，也有在线与旧段落的成员信息差异。
+29,react-dev-00200,EM通过,,finished,Crackle,Crackle,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+30,react-dev-06849,步数耗尽，未提交,实体偏航；查询未命中；协议损耗,max_steps,July 25 to August 4,,高,模型围绕泛称 World Games 和 David Lloyd 搜索，没有定位到标注的 Racquetball at the 1985 World Games，因此无法取得日期。第 1 次模拟多步输出被拒绝。
+31,react-dev-01720,步数耗尽，未提交,实时页面信息缺失；工具状态误用,max_steps,Marie,,高,第 3 步定位到 Kerry Butler；但实际人物摘要为 Kerry Butler，原始标注首句为 Kerry Marie Butler。Lookup middle name 未命中，搜索 full name 未命中后再 Lookup 也因页面清空失败。可能涉及信息版本/检索覆盖，不能单凭加步数保证修复。
+32,react-dev-06709,步数耗尽，未提交,题意歧义；工具状态误用,max_steps,La mamma morta,,高,模型找到 Andrea Chénier，却试图寻找“第三幕的名称”；第 4 步候选已出现 La mamma morta，没有查询该候选，反而在空页面 Lookup。原始证据说 La mamma morta 是第三幕中的咏叹调，不是第三幕名称，题面表述与标注关系不严谨。
+33,react-dev-01885,EM通过,,finished,Nick Offerman,Nick Offerman,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+34,react-dev-00807,EM通过,,finished,Game of Thrones,Game of Thrones,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+35,react-dev-04050,EM通过,,finished,Israeli-American,Israeli-American,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+36,react-dev-03395,表达或答案范围差异,参考抽取范围较窄,finished,French and English,"English, German, French, and Spanish",高,实时页面明确列 English/German/French/Spanish，模型据此答四种；参考只写 French and English。重要的是原始支持句本身也说他后来 learned German and Spanish。这里存在参考抽取范围和人生阶段限定问题，不宜简单归因于模型凭空加语言。
+37,react-dev-03543,EM通过,,finished,1972,1972,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+38,react-dev-07275,EM通过,,finished,Kurt Gerron,Kurt Gerron,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+39,react-dev-04330,表达或答案范围差异,简称与全称,finished,"""Brotherly Leader"" of the Great Socialist People's Libyan Arab Jamahiriya",Brotherly Leader,高,模型答 Brotherly Leader，真实摘要与参考的长称号包含同一核心称谓，但省略国家全称等修饰。属于简称与参考长称号范围差异，保持原 EM=0，另行人工审查。
+40,react-dev-05503,题意、关系或证据误读,关系类型误读,finished,postmodern schools of thought,critical theory and cultural studies,高,模型找到了正确的 Postcolonialism，却用 overlaps with critical theory and cultural studies 回答 draws from what schools of thought。原标注句为 drawing from postmodern schools of thought。相关领域与理论来源是不同关系。
+41,react-dev-02811,步数耗尽，未提交,检索路径偏航；实时页面信息缺失,max_steps,1.5 million households,,高,Di-Gata Defenders 当前页面 Lookup South Africa 未命中后，模型转到 Jetix 路线；原始支持证据指向 Nickelodeon (Africa) 及其 1.5 million households，实际轨迹没有到达该网络。
+42,react-dev-01320,同名实体选错,同名实体混淆,finished,James Taylor,Andrew Preston,高,"模型选择 Andrew Preston (businessman), born 1846，与歌手 James Taylor (1948) 比较。标注中的 Andrew Preston 实际是 Isaac M. Taylor 的儿子、出生于 1983，与歌手同父异母。对象选错后年份计算可自洽，但不回答标注指定的人。"
+43,react-dev-02609,表达或答案范围差异,实体别名,finished,Tiffany's,Tiffany & Co.,高,预测 Tiffany & Co.，参考 Tiffany’s。原始支持句明确说明 Tiffany & Company colloquially Tiffany or Tiffany’s，同一实体别名有直接依据。原 EM/F1 均为 0，但不能据此说选错珠宝商。
+44,react-dev-05291,EM通过,,finished,no,No,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+45,react-dev-04152,步数耗尽，未提交,同名歌曲混淆；题面名称差异；协议损耗,max_steps,Harlem,,高,模型选中 No Problem (Chance the Rapper song)，后来发现 Chicago 与 New York 条件矛盾，但未定位正确对象。标注实际使用 No Problems (song) → Azealia Banks → Harlem，题面是单数 No Problem，增加了消歧难度。
+46,react-dev-04506,EM通过,,finished,New York City,New York City,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+47,react-dev-02521,EM通过,,finished,Len Wiseman,Len Wiseman,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。
+48,react-dev-01560,实时与标注数值差异,同年数值冲突,finished,"143,007","143,229",高,"模型正确定位 Shillong，实际摘要写 2011 census 143,229；原始标注同样指 2011 census，却为 143,007。不能用“一个是更新年份”解释同年差异；应进一步查统计口径或页面修订，本次仅确认数值不一致。"
+49,react-dev-06916,表达或答案范围差异,数量限定缺失,finished,a pair of dice,dice,高,模型答 dice，参考 a pair of dice。原始支持句为一对骰子，真实工具句也写 two dice。核心游戏用具相同但预测省略数量，是否接受应由预先规定的语义评分规则决定，不事后加分。
+50,react-dev-05679,EM通过,,finished,Switzerland,Switzerland,高（仅指匹配事实）,与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。

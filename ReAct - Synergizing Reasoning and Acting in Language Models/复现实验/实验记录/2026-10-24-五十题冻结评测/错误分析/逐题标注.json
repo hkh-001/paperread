@@ -1,0 +1,1634 @@
+[
+  {
+    "primary": "表达或答案范围差异",
+    "secondary": [
+      "预测集合一致",
+      "缺少方位",
+      "证据未完全核验"
+    ],
+    "observation_and_interpretation": "预测与参考包含相同两座国家公园，但顺序不同且省略 east/west 方位。原题问哪两座公园，并未明确要求方位，因此 EM=0 不等于公园名字错误。实际轨迹未查到 Homestead 的完整标注句，证据核验仍有欠缺。",
+    "confidence": "高",
+    "n": 1,
+    "id": "react-dev-03265",
+    "question": "South Dade High School is located between what two national parks?",
+    "gold": "Biscayne National Park to the east and Everglades National Park to the west",
+    "prediction": "Everglades National Park and Biscayne National Park",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.7777777777777778,
+    "format_errors": 0,
+    "original_id": "5abea05f5542991f661061b6",
+    "trace_file": "../逐题轨迹/01-react-dev-03265.md",
+    "supporting_facts": [
+      {
+        "title": "South Dade High School",
+        "sent_id": 0,
+        "sentence": "South Dade Senior High School is a secondary school located in unincorporated Miami-Dade County, Florida, near Homestead."
+      },
+      {
+        "title": "Homestead, Florida",
+        "sent_id": 0,
+        "sentence": "Homestead is a city within Miami-Dade County in the U.S. state of Florida, between Biscayne National Park to the east and Everglades National Park to the west."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "协议损耗",
+      "页面重定向",
+      "工具状态误用"
+    ],
+    "observation_and_interpretation": "7 次调用中前 3 次因模型自行生成 Observation 被拒绝。真实查询纪录片标题重定向到人物页，未取得标注中的 Steve Coogan 证据；第 7 步在前次搜索未命中后执行 Lookup，返回 No current page。题面 Splitting Image 与标注 Spitting Image 的拼写也不同。",
+    "confidence": "高",
+    "n": 2,
+    "id": "react-dev-07174",
+    "question": "What \"Splitting Image\" voice artist provided testimony in Evidently... John Cooper Clarke?",
+    "gold": "Stephen John Coogan",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 3,
+    "original_id": "5a807ceb554299485f598616",
+    "trace_file": "../逐题轨迹/02-react-dev-07174.md",
+    "supporting_facts": [
+      {
+        "title": "Evidently... John Cooper Clarke",
+        "sent_id": 2,
+        "sentence": "It features testimonies from Alex Turner, Bill Bailey, Pete Shelley, Paul Farley, Steve Coogan, Mark Radcliffe, Craig Charles, Plan B, Kate Nash, Miranda Sawyer and Paul Morley; and poems by Clarke including \"Things Are Gonna Get Worse\", \"Evidently Chickentown\", \"Twat\" and \"Beasley Street\"."
+      },
+      {
+        "title": "Steve Coogan",
+        "sent_id": 0,
+        "sentence": "Stephen John Coogan (born 14 October 1965) is an English actor, stand-up comedian, impressionist, screenwriter, and producer."
+      },
+      {
+        "title": "Steve Coogan",
+        "sent_id": 1,
+        "sentence": "He began his career in the 1980s, working as a voice artist on the satirical puppet show \"Spitting Image\" and providing voiceovers for television advertisements."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "题意歧义",
+      "实体偏航",
+      "查询未命中"
+    ],
+    "observation_and_interpretation": "Princess Max 查询未命中后，模型依据候选偏向 Leapster/L-MAX，未找到标注的 Princess Max → Tamagotchi → Bandai 链。题目问 Where，参考答案却是发行商 Bandai，存在地点与机构类型歧义；不能将全部失败归因于搜索策略。",
+    "confidence": "高",
+    "n": 3,
+    "id": "react-dev-02927",
+    "question": "Where was the device that is similar to Princess max released?",
+    "gold": "Bandai",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5a82678a5542995ce29dccfa",
+    "trace_file": "../逐题轨迹/03-react-dev-02927.md",
+    "supporting_facts": [
+      {
+        "title": "Princess Max",
+        "sent_id": 0,
+        "sentence": "Princess Max is a device similar to a Tamagotchi."
+      },
+      {
+        "title": "Tamagotchi",
+        "sent_id": 1,
+        "sentence": "It was released by Bandai on November 23, 1996 in Japan and May 1997 in the rest of the world, quickly becoming one of the biggest toy fads of the 1990s and early 2000s."
+      }
+    ]
+  },
+  {
+    "primary": "题意、关系或证据误读",
+    "secondary": [
+      "机构链偏离",
+      "问答关系误读",
+      "证据不足"
+    ],
+    "observation_and_interpretation": "模型沿 Carl Wieland → CMI → young Earth creationism，回答组织自身相信什么；标注沿 Carl Wieland → Answers in Genesis，要求说明其如何评价其他观点（compromise on biblical inerrancy）。存在机构对应和关系目标两处偏离。",
+    "confidence": "高",
+    "n": 4,
+    "id": "react-dev-03618",
+    "question": "What does the organization associated with Carl Wieland believe about anything other than the young earth view? ",
+    "gold": "a compromise on biblical inerrancy",
+    "prediction": "It believes in the inerrancy of the Bible and a literal interpretation of the Book of Genesis, including events such as Noah's Flood.",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.08695652173913043,
+    "format_errors": 0,
+    "original_id": "5ac19eb35542994ab5c67da3",
+    "trace_file": "../逐题轨迹/04-react-dev-03618.md",
+    "supporting_facts": [
+      {
+        "title": "Carl Wieland",
+        "sent_id": 0,
+        "sentence": "Carl Wieland (born 1950) is an Australian young earth creationist, author and speaker."
+      },
+      {
+        "title": "Carl Wieland",
+        "sent_id": 1,
+        "sentence": "He was the Managing Director of Creation Ministries International (formerly Answers in Genesis - Australia), a Creationist apologetics ministry."
+      },
+      {
+        "title": "Answers in Genesis",
+        "sent_id": 0,
+        "sentence": "Answers in Genesis (AiG) is a fundamentalist Christian apologetics parachurch organization."
+      },
+      {
+        "title": "Answers in Genesis",
+        "sent_id": 2,
+        "sentence": "The organization sees evolution as incompatible with scripture and believes anything other than the young earth view is a compromise on biblical inerrancy."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "证据已出现未停止",
+      "附加约束",
+      "协议损耗"
+    ],
+    "observation_and_interpretation": "第 4 步 Gary Sinise 的真实摘要已说明 born 1955 和 nominated for an Academy Award，第 5 步再次确认。模型第 6 步却增加“必须与 Ransom 角色绑定的具体提名”这一约束，继续查找并耗尽预算。原题只以 Ransom 识别演员，没有要求提名来自该片。",
+    "confidence": "高",
+    "n": 5,
+    "id": "react-dev-06432",
+    "question": "What award was an actor born in 1955 that acted in the movie Ransom nominated for?",
+    "gold": "Academy Award",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 1,
+    "original_id": "5a7bc42e554299294a54aabe",
+    "trace_file": "../逐题轨迹/05-react-dev-06432.md",
+    "supporting_facts": [
+      {
+        "title": "Ransom (1996 film)",
+        "sent_id": 0,
+        "sentence": "Ransom is a 1996 American crime thriller film directed by Ron Howard and written by Richard Price and Alexander Ignon."
+      },
+      {
+        "title": "Ransom (1996 film)",
+        "sent_id": 1,
+        "sentence": "The film stars Mel Gibson, Rene Russo, Gary Sinise, Brawley Nolte, Delroy Lindo, Liev Schreiber, Evan Handler, Donnie Wahlberg, and Lili Taylor."
+      },
+      {
+        "title": "Gary Sinise",
+        "sent_id": 0,
+        "sentence": "Gary Alan Sinise ( ; born March 17, 1955) is an American actor, director, and musician."
+      },
+      {
+        "title": "Gary Sinise",
+        "sent_id": 1,
+        "sentence": "Among other awards, he has won an Emmy Award, a Golden Globe Award, a star on Hollywood Walk of Fame and has been nominated for an Academy Award."
+      }
+    ]
+  },
+  {
+    "primary": "题意、关系或证据误读",
+    "secondary": [
+      "关系方向错误",
+      "证据不足"
+    ],
+    "observation_and_interpretation": "模型 Lookup objection 没有结果，仍由“反对建制教会”推到 Protestantism。原始支持链为 Ranters 属 radical Protestants，再接 Protestantism 与 Roman Catholic Church 的改革关系。它把所属阵营/类别和题目要求的反对对象混淆；该解释限于本题标注链，不代替完整历史考证。",
+    "confidence": "高",
+    "n": 6,
+    "id": "react-dev-04525",
+    "question": "The Ranters were a loose collection of radical so-called heretics whose main objection was with what major division of Christendom?",
+    "gold": "Roman Catholicism",
+    "prediction": "Protestantism",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 1,
+    "original_id": "5ab8420555429919ba4e2290",
+    "trace_file": "../逐题轨迹/06-react-dev-04525.md",
+    "supporting_facts": [
+      {
+        "title": "Laurence Clarkson",
+        "sent_id": 1,
+        "sentence": "He was the most outspoken and notorious of the loose collection of radical Protestants known as the Ranters."
+      },
+      {
+        "title": "Protestantism",
+        "sent_id": 0,
+        "sentence": "Protestantism is a form of Christianity which originated with the Reformation, a movement against what its followers considered to be errors in the Roman Catholic Church."
+      },
+      {
+        "title": "Protestantism",
+        "sent_id": 1,
+        "sentence": "It is one of the three major divisions of Christendom, together with Roman Catholicism and Orthodoxy."
+      }
+    ]
+  },
+  {
+    "primary": "题意、关系或证据误读",
+    "secondary": [
+      "题意不清",
+      "目标关系偏离"
+    ],
+    "observation_and_interpretation": "题面语法含混。模型回答 Frigg 关联哪些女神与来源书籍；原标注是 Hlín → Norse mythology → tales of various deities/beings/heroes。模型没有走到 mythology consists of tales 的目标关系。",
+    "confidence": "高",
+    "n": 7,
+    "id": "react-dev-00457",
+    "question": "What does the goddess associated with the goddess frigg  consists of what tales?",
+    "gold": "various deities, beings, and heroes",
+    "prediction": "Frigg is associated with the goddesses Fulla, Lofn, Hlín, and Gná (and ambiguously with Jörð/Earth); the surviving tales about her come mainly from Norse mythology sources such as the Prose Edda and Poetic Edda.",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.05555555555555555,
+    "format_errors": 0,
+    "original_id": "5adc8977554299438c868de2",
+    "trace_file": "../逐题轨迹/07-react-dev-00457.md",
+    "supporting_facts": [
+      {
+        "title": "Hlín",
+        "sent_id": 0,
+        "sentence": "In Norse mythology, Hlín (Old Norse \"protectress\") is a goddess associated with the goddess Frigg."
+      },
+      {
+        "title": "Norse mythology",
+        "sent_id": 1,
+        "sentence": "The northernmost extension of Germanic mythology, Norse mythology consists of tales of various deities, beings, and heroes derived from numerous sources from both before and after the pagan period, including medieval manuscripts, archaeological representations, and folk tradition."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 8,
+    "id": "react-dev-00909",
+    "question": "Are both Delmer Daves and Jean-Pierre Jeunet film directors?",
+    "gold": "yes",
+    "prediction": "Yes",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5adde3a45542997545bbbdc2",
+    "trace_file": "../逐题轨迹/08-react-dev-00909.md",
+    "supporting_facts": [
+      {
+        "title": "Delmer Daves",
+        "sent_id": 0,
+        "sentence": "Delmer Lawrence Daves (July 24, 1904 – August 17, 1977) was an American screenwriter, director and producer."
+      },
+      {
+        "title": "Jean-Pierre Jeunet",
+        "sent_id": 0,
+        "sentence": "Jean-Pierre Jeunet (] ; born 3 September 1953) is a French film director and screenwriter known for the films \"Delicatessen\", \"The City of Lost Children\", \"\" and \"Amélie\"."
+      }
+    ]
+  },
+  {
+    "primary": "题面与答案类型冲突",
+    "secondary": [
+      "题目答案类型冲突"
+    ],
+    "observation_and_interpretation": "题面问 what Georgia college，模型答 Georgia Southern University；真实段落与原标注都支持该大学与作品的关系。参考答案却是歌剧 A Scholar Under Siege。这里应标注问句要求的学校与参考作品类型不一致，不能直接判模型选错学校。",
+    "confidence": "高",
+    "n": 9,
+    "id": "react-dev-03188",
+    "question": "Michael Braz completed a libretto for what Georgia college, founded in 1906?",
+    "gold": "A Scholar Under Siege",
+    "prediction": "Georgia Southern University",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5a7730f255429972597f148c",
+    "trace_file": "../逐题轨迹/09-react-dev-03188.md",
+    "supporting_facts": [
+      {
+        "title": "A Scholar Under Siege",
+        "sent_id": 0,
+        "sentence": "A Scholar Under Siege is an opera in two acts by contemporary American composer Michael Braz."
+      },
+      {
+        "title": "A Scholar Under Siege",
+        "sent_id": 1,
+        "sentence": "Braz also wrote the English language libretto for the opera which was composed for the centenary of Georgia Southern University."
+      },
+      {
+        "title": "Georgia Southern University",
+        "sent_id": 1,
+        "sentence": "Founded in 1906 as a land grant college, it's part of the University System of Georgia and is the largest center of higher education inside the southern half of Georgia."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 10,
+    "id": "react-dev-00919",
+    "question": "What character in \"Father Ted\" was played by an actor who starred in Death in Paradise?",
+    "gold": "Father Dougal McGuire",
+    "prediction": "Father Dougal McGuire",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 1,
+    "original_id": "5adfcb5455429906c02daa48",
+    "trace_file": "../逐题轨迹/10-react-dev-00919.md",
+    "supporting_facts": [
+      {
+        "title": "Death in Paradise (TV series)",
+        "sent_id": 0,
+        "sentence": "Death in Paradise is a British-French crime comedy-drama television series created by Robert Thorogood, starring Ben Miller (series 1–3), Kris Marshall (series 3–6) & Ardal O'Hanlon (series 6–present)."
+      },
+      {
+        "title": "Ardal O'Hanlon",
+        "sent_id": 1,
+        "sentence": "He played Father Dougal McGuire in \"Father Ted\", George Sunday/Thermoman in \"My Hero\", and DI Jack Mooney in \"Death in Paradise\"."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 11,
+    "id": "react-dev-00690",
+    "question": "What was the name of the team that represented an Arizona university in the conference that covers a broad expanse of the western United States, including Arizona, California, and New Mexico?",
+    "gold": "Arizona State Sun Devils",
+    "prediction": "Arizona State Sun Devils",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 1,
+    "original_id": "5a8752955542994775f607d1",
+    "trace_file": "../逐题轨迹/11-react-dev-00690.md",
+    "supporting_facts": [
+      {
+        "title": "1966 Arizona State Sun Devils football team",
+        "sent_id": 0,
+        "sentence": "The 1966 Arizona State Sun Devils football team was an American football team that represented Arizona State University in the Western Athletic Conference (WAC) during the 1966 college football season."
+      },
+      {
+        "title": "Western Athletic Conference",
+        "sent_id": 0,
+        "sentence": "The Western Athletic Conference (WAC) is an American collegiate athletic conference formed on July 27, 1962 and affiliated with the National Collegiate Athletic Association (NCAA) Division I."
+      },
+      {
+        "title": "Western Athletic Conference",
+        "sent_id": 1,
+        "sentence": "The WAC covers a broad expanse of the western United States, with member institutions located in Arizona, California, New Mexico, Utah, and Washington, along with the \"non-western\" states of Missouri and Illinois (traditionally associated with the Midwest), as well as Texas (traditionally associated with the Southwest)."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 12,
+    "id": "react-dev-02053",
+    "question": "Billy King was an Australian rules footballer who participated in a game that was contested between the South Melbourne Football Club and Carlton Football Club, and was held at what location in Melbourne in 1945?",
+    "gold": "Princes Park",
+    "prediction": "Princes Park",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5ab3c470554299233954ffa1",
+    "trace_file": "../逐题轨迹/12-react-dev-02053.md",
+    "supporting_facts": [
+      {
+        "title": "Billy King (Australian footballer)",
+        "sent_id": 0,
+        "sentence": "William Herbert 'Billy' King (17 August 1920 – 23 August 1990) was an Australian rules footballer who played for South Melbourne in the VFL during the 1940s."
+      },
+      {
+        "title": "Billy King (Australian footballer)",
+        "sent_id": 2,
+        "sentence": "Primarily a wingman, he participated in the famous 1945 'Bloodbath' Grand Final which South Melbourne lost to Carlton."
+      },
+      {
+        "title": "1945 VFL Grand Final",
+        "sent_id": 0,
+        "sentence": "The 1945 VFL Grand Final was an Australian rules football game contested between the South Melbourne Football Club and Carlton Football Club, held at Princes Park in Melbourne on 29 September 1945."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "列表定位",
+      "工具状态误用"
+    ],
+    "observation_and_interpretation": "模型找到了 Northeast megalopolis，但数次 Lookup 未取得完整列表；失败 Search 清空当前页，第 5 步 Lookup 返回 No current page。第 7 步实际观察仅列五个都市区，仍未提交；原标注列八座城市。",
+    "confidence": "高",
+    "n": 13,
+    "id": "react-dev-01439",
+    "question": "Manchester, New Hampshire is a part of the Northeast megalopolis which included what other major cities?",
+    "gold": "Boston, Providence, Hartford, New York City, Philadelphia, Wilmington, Baltimore, and Washington, D.C.",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5ade450b5542997c77adedc5",
+    "trace_file": "../逐题轨迹/13-react-dev-01439.md",
+    "supporting_facts": [
+      {
+        "title": "Manchester, New Hampshire",
+        "sent_id": 0,
+        "sentence": "Manchester is the largest city in the U.S. state of New Hampshire, the eleventh largest city in New England, and as of 2016 the largest city in northern New England, an area comprising the states of Maine, New Hampshire, and Vermont."
+      },
+      {
+        "title": "Northeast megalopolis",
+        "sent_id": 1,
+        "sentence": "It includes the major cities of Boston, Providence, Hartford, New York City, Philadelphia, Wilmington, Baltimore, and Washington, D.C., along with their metropolitan areas and suburbs as well as many smaller urban centers."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 14,
+    "id": "react-dev-00156",
+    "question": "Which was fought earlier in our nation's history, the Seven Days Battles or the Battle of Manila?",
+    "gold": "The Seven Days Battles",
+    "prediction": "Seven Days Battles",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 1,
+    "original_id": "5a7633ad5542992db9473741",
+    "trace_file": "../逐题轨迹/14-react-dev-00156.md",
+    "supporting_facts": [
+      {
+        "title": "Seven Days Battles",
+        "sent_id": 0,
+        "sentence": "The Seven Days Battles were a series of six major battles over the seven days from June 25 to July 1, 1862, near Richmond, Virginia, during the American Civil War."
+      },
+      {
+        "title": "Battle of Manila (1945)",
+        "sent_id": 0,
+        "sentence": "The Battle of Manila (February 3, 1945 – March 3, 1945) was a major battle of the Philippine campaign of 1944-45, during the Second World War."
+      }
+    ]
+  },
+  {
+    "primary": "实时与标注数值差异",
+    "secondary": [
+      "实时数值与旧段落冲突"
+    ],
+    "observation_and_interpretation": "模型先识别 US Navy，真实 Lookup 返回 336,978 active duty，最终如实输出该数字；原标注段落为 322,421。确认的是两份证据数值冲突，尚未核对各自统计日期或口径，不能声称当前值必然更正确。",
+    "confidence": "高",
+    "n": 15,
+    "id": "react-dev-04678",
+    "question": "How many personnel does the Navy that had Gilliam-class atttack transports have on active duty?",
+    "gold": "322,421 personnel on active duty",
+    "prediction": "336,978",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5ac2c338554299657fa29039",
+    "trace_file": "../逐题轨迹/15-react-dev-04678.md",
+    "supporting_facts": [
+      {
+        "title": "USS Carlisle (APA-69)",
+        "sent_id": 0,
+        "sentence": "USS \"Carlisle\" (APA-69) was a \"Gilliam\"-class attack transport that served with the US Navy during World War II."
+      },
+      {
+        "title": "United States Navy",
+        "sent_id": 3,
+        "sentence": "The service has 322,421 personnel on active duty and 107,577 in the Navy Reserve."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 16,
+    "id": "react-dev-04237",
+    "question": "\"Tunak\", is a bhangra/pop love song by an artist born in which year ?",
+    "gold": "1967",
+    "prediction": "1967",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5ab82d095542990e739ec853",
+    "trace_file": "../逐题轨迹/16-react-dev-04237.md",
+    "supporting_facts": [
+      {
+        "title": "Tunak Tunak Tun",
+        "sent_id": 0,
+        "sentence": "\"Tunak Tunak Tun\" (Punjabi: ਤੁਣਕ ਤੁਣਕ ਤੁਣ ) or simply \"Tunak\", is a bhangra/pop love song by Indian artist Daler Mehndi released in 1998."
+      },
+      {
+        "title": "Daler Mehndi",
+        "sent_id": 0,
+        "sentence": "Daler Singh, known by his stage name, \"Daler Mehndi\" (born 18 August 1967) is an Indian recording artist, musician, songwriter, author, record producer, performer and environmentalist."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 17,
+    "id": "react-dev-01534",
+    "question": "Did the board game San Marco or About Time come out first?",
+    "gold": "San Marco",
+    "prediction": "San Marco",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5a713fb15542994082a3e6f0",
+    "trace_file": "../逐题轨迹/17-react-dev-01534.md",
+    "supporting_facts": [
+      {
+        "title": "San Marco (board game)",
+        "sent_id": 0,
+        "sentence": "San Marco is a 2001 designer board game by Alan R. Moon and Aaron Weissblum."
+      },
+      {
+        "title": "About Time (board game)",
+        "sent_id": 0,
+        "sentence": "About Time is a general knowledge historical board game first seen on Series 5 of the BBC new-business reality show \"Dragon's Den\" on December 17, 2007."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 18,
+    "id": "react-dev-04679",
+    "question": "Is Northeast Florida Regional Airport farther from St. Augustine than Glacier Park International Airport is to Kalispell?",
+    "gold": "no",
+    "prediction": "No",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5ade64c7554299728e26c710",
+    "trace_file": "../逐题轨迹/18-react-dev-04679.md",
+    "supporting_facts": [
+      {
+        "title": "Northeast Florida Regional Airport",
+        "sent_id": 0,
+        "sentence": "Northeast Florida Regional Airport (IATA: UST, ICAO: KSGJ, FAA LID: SGJ) , formerly St. Augustine Airport, is four miles (6 km) north of St. Augustine, in St. Johns County, Florida."
+      },
+      {
+        "title": "Glacier Park International Airport",
+        "sent_id": 0,
+        "sentence": "Glacier Park International Airport (IATA: FCA, ICAO: KGPI, FAA LID: GPI) is in Flathead County, Montana, six miles northeast of Kalispell."
+      }
+    ]
+  },
+  {
+    "primary": "表达或答案范围差异",
+    "secondary": [
+      "名称与整句抽取"
+    ],
+    "observation_and_interpretation": "模型答 Psych，参考答案为 Psych is an American detective comedy-drama。原始支持句与真实工具结果均指向同一剧名。属于清晰的实体名与长抽取片段差异，不是找错电视剧。",
+    "confidence": "高",
+    "n": 19,
+    "id": "react-dev-02825",
+    "question": "Kurt Fuller from Stockton, CA appeared in which American Detective Comedy Drama television series created by Steve Franks?",
+    "gold": "Psych is an American detective comedy-drama",
+    "prediction": "Psych",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.33333333333333337,
+    "format_errors": 2,
+    "original_id": "5ab721325542992aa3b8c7a2",
+    "trace_file": "../逐题轨迹/19-react-dev-02825.md",
+    "supporting_facts": [
+      {
+        "title": "Kurt Fuller",
+        "sent_id": 2,
+        "sentence": "He graduated from Lincoln High School in Stockton, California in 1971, and U.C. Berkeley in 1976."
+      },
+      {
+        "title": "Psych",
+        "sent_id": 0,
+        "sentence": "Psych is an American detective comedy-drama television series created by Steve Franks and broadcast on USA Network with syndicated reruns on ION Television."
+      }
+    ]
+  },
+  {
+    "primary": "表达或答案范围差异",
+    "secondary": [
+      "赛季限定缺失",
+      "特定胜负未充分核验"
+    ],
+    "observation_and_interpretation": "模型答 Kansas Jayhawks，参考是 The 2008 Kansas Jayhawks。球队实体一致但缺少年份；实际轨迹仅验证两队存在 rivalry，没有查证 2008 场次胜负，因此不能把它直接当成完全等价答案。",
+    "confidence": "高",
+    "n": 20,
+    "id": "react-dev-03446",
+    "question": "Who beat the Missouri Tigers in what is alternatively known as the Border Showdown?",
+    "gold": "The 2008 Kansas Jayhawks",
+    "prediction": "Kansas Jayhawks",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.8,
+    "format_errors": 0,
+    "original_id": "5a74594a55429974ef308be1",
+    "trace_file": "../逐题轨迹/20-react-dev-03446.md",
+    "supporting_facts": [
+      {
+        "title": "2008 Kansas Jayhawks football team",
+        "sent_id": 0,
+        "sentence": "The 2008 Kansas Jayhawks football team (variously \"Kansas\", \"KU\", or the \"Jayhawks\") represented the University of Kansas in the 2008 NCAA Division I FBS football season."
+      },
+      {
+        "title": "2008 Kansas Jayhawks football team",
+        "sent_id": 5,
+        "sentence": "The team finished the regular season with a victory over their archrival, the Missouri Tigers (who was then ranked 13th in the BCS Poll), in the Border War."
+      },
+      {
+        "title": "Border War (Kansas–Missouri rivalry)",
+        "sent_id": 0,
+        "sentence": "The Border War (alternatively, Border Showdown) is the name of the rivalry between athletic teams from the University of Kansas and University of Missouri, the Kansas Jayhawks and the Missouri Tigers respectively."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 21,
+    "id": "react-dev-04739",
+    "question": "Vices and Virtues, coincidentally released just four days after \"Vices & Virtues\" by Las Vegas band Panic! at the Disco, was the second studio album by which Canadian rock band?",
+    "gold": "Art of Dying",
+    "prediction": "Art of Dying",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 1,
+    "original_id": "5a8ad2f3554299515336138d",
+    "trace_file": "../逐题轨迹/21-react-dev-04739.md",
+    "supporting_facts": [
+      {
+        "title": "Vices and Virtues (Art of Dying album)",
+        "sent_id": 0,
+        "sentence": "Vices and Virtues is the second studio album by Canadian rock band Art of Dying."
+      },
+      {
+        "title": "Vices and Virtues (Art of Dying album)",
+        "sent_id": 2,
+        "sentence": "Coincidentally, alternative rock band Panic!"
+      },
+      {
+        "title": "Panic! at the Disco",
+        "sent_id": 1,
+        "sentence": "at the Disco is an American rock band from Las Vegas, Nevada, formed in 2004 and featuring the current lineup of vocalist Brendon Urie, accompanied on tour by bassist Dallon Weekes, guitarist Kenneth Harris and drummer Dan Pawlovich."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 22,
+    "id": "react-dev-03511",
+    "question": "Was Vanderbilt University or Emory University founded first?",
+    "gold": "Emory University.",
+    "prediction": "Emory University",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5ab32fc355429969a97a80fa",
+    "trace_file": "../逐题轨迹/22-react-dev-03511.md",
+    "supporting_facts": [
+      {
+        "title": "Vanderbilt University",
+        "sent_id": 1,
+        "sentence": "Founded in 1873, it was named in honor of shipping and rail magnate Cornelius Vanderbilt, who provided the school its initial $1 million endowment despite having never been to the South."
+      },
+      {
+        "title": "Emory University",
+        "sent_id": 1,
+        "sentence": "The university was founded as Emory College in 1836 in Oxford, Georgia by the Methodist Episcopal Church and was named in honor of Methodist bishop John Emory."
+      },
+      {
+        "title": "Emory University",
+        "sent_id": 2,
+        "sentence": "In 1915, the college relocated to metropolitan Atlanta and was rechartered as Emory University."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 23,
+    "id": "react-dev-06102",
+    "question": "Are The Man from Snowy River II and Miracle of the White Stallions filmed in different countries?",
+    "gold": "yes",
+    "prediction": "Yes",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5add0f635542994ed6169c56",
+    "trace_file": "../逐题轨迹/23-react-dev-06102.md",
+    "supporting_facts": [
+      {
+        "title": "The Man from Snowy River II",
+        "sent_id": 0,
+        "sentence": "The Man from Snowy River II is a 1988 Australian drama film, the sequel to the 1982 film \"The Man from Snowy River\"."
+      },
+      {
+        "title": "Miracle of the White Stallions",
+        "sent_id": 0,
+        "sentence": "Miracle of the White Stallions is a 1963 film released by Walt Disney starring Robert Taylor (playing Alois Podhajsky), Lilli Palmer, and Eddie Albert."
+      },
+      {
+        "title": "Miracle of the White Stallions",
+        "sent_id": 1,
+        "sentence": "It is the story of the evacuation of the Lipizzaner horses from the Spanish Riding School in Vienna during World War II."
+      }
+    ]
+  },
+  {
+    "primary": "表达或答案范围差异",
+    "secondary": [
+      "数字与文字"
+    ],
+    "observation_and_interpretation": "3 与 three official languages 的数量一致。原始 Luxembourg 支持句明确为三种官方语言。真实轨迹只查看首段后凭已知信息回答，没有在返回摘要中直接展示语言句；评分表达差异与证据覆盖应分别看待。",
+    "confidence": "高",
+    "n": 24,
+    "id": "react-dev-03805",
+    "question": "Hivange is a village in a country that has how many official languages ?",
+    "gold": "three official languages",
+    "prediction": "3",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5ab674ee5542995eadeefff2",
+    "trace_file": "../逐题轨迹/24-react-dev-03805.md",
+    "supporting_facts": [
+      {
+        "title": "Hivange",
+        "sent_id": 0,
+        "sentence": "Hivange (Luxembourgish: \"Héiweng\" , German: \"Hivingen\" ) is a village in the commune of Garnich, in western Luxembourg."
+      },
+      {
+        "title": "Luxembourg",
+        "sent_id": 4,
+        "sentence": "This is emphasised by the three official languages, Luxembourgish, French, and German."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 25,
+    "id": "react-dev-05123",
+    "question": "Ferdinand Zvonimir von Habsburg is the eldest son of the head of which House",
+    "gold": "House of Habsburg-Lorraine",
+    "prediction": "House of Habsburg-Lorraine",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5ac31a73554299741d48a1e9",
+    "trace_file": "../逐题轨迹/25-react-dev-05123.md",
+    "supporting_facts": [
+      {
+        "title": "Ferdinand Zvonimir von Habsburg",
+        "sent_id": 0,
+        "sentence": "Ferdinand Zvonimir Maria Balthus Keith Michael Otto Antal Bahnam Leonhard von Habsburg (born 21 June 1997 in Salzburg), is the eldest son of Karl von Habsburg, head of the House of Habsburg-Lorraine."
+      },
+      {
+        "title": "Karl von Habsburg",
+        "sent_id": 0,
+        "sentence": "Karl von Habsburg (Karl Thomas Robert Maria Franziskus Georg Bahnam; born 11 January 1961), also known as \"Karl of Austria\" and referred to in Austria as \"Karl Habsburg-Lothringen\", is an Austrian politician, the current head of the House of Habsburg-Lorraine which ruled the lands of the Habsburg Monarchy, the Empire of Austria the Austro-Hungarian Monarchy, and the Kingdom of Hungary as well as the Crown lands of Bohemia and Croatia by hereditary right until the end of World War I. Born in Starnberg, Germany, in 1961, he is the son of Otto von Habsburg and Princess Regina of Saxe-Meiningen, and the grandson of the last Austrian emperor, Charles I."
+      }
+    ]
+  },
+  {
+    "primary": "表达或答案范围差异",
+    "secondary": [
+      "食材粒度差异"
+    ],
+    "observation_and_interpretation": "模型基于真实配方摘要答 lime juice；参考 lime，原始两段分别使用 lime juice 和 lime。主题一致，但水果与果汁不是严格同一字符串，应作粒度人工审查，不能制定随意去词规则自动补分。",
+    "confidence": "高",
+    "n": 26,
+    "id": "react-dev-06414",
+    "question": "What ingredient is in both Cosmopolitan and Cuba Libre?",
+    "gold": "lime",
+    "prediction": "lime juice",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.6666666666666666,
+    "format_errors": 1,
+    "original_id": "5a8900c75542997e5c09a6ed",
+    "trace_file": "../逐题轨迹/26-react-dev-06414.md",
+    "supporting_facts": [
+      {
+        "title": "Cosmopolitan (cocktail)",
+        "sent_id": 0,
+        "sentence": "A cosmopolitan, or informally a cosmo, is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice."
+      },
+      {
+        "title": "Cuba Libre",
+        "sent_id": 0,
+        "sentence": "The Cuba Libre ( ; ] , \"Free Cuba\") is a caffeinated alcoholic cocktail made of cola, lime, and dark or light rum."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 27,
+    "id": "react-dev-07026",
+    "question": "Which peak is flanked by Manaslu, Shispare or Ngadi Chuli?",
+    "gold": "Ngadi Chuli",
+    "prediction": "Ngadi Chuli",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5ab852c05542990e739ec8c5",
+    "trace_file": "../逐题轨迹/27-react-dev-07026.md",
+    "supporting_facts": [
+      {
+        "title": "Shispare",
+        "sent_id": 0,
+        "sentence": "Shispare (Urdu: ‎ ) is one of the high peaks of the Batura Muztagh,"
+      },
+      {
+        "title": "Ngadi Chuli",
+        "sent_id": 0,
+        "sentence": "Ngadi Chuli (also known as Peak 29, Dakura, Dakum, or Dunapurna) is a high peak in the Mansiri Himal (or Manaslu Himal), also known as the Gurkha Massif, in Nepal."
+      },
+      {
+        "title": "Ngadi Chuli",
+        "sent_id": 1,
+        "sentence": "It is flanked by Manaslu to the north and Himalchuli to the south."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "资料版本差异",
+      "候选偏航",
+      "协议损耗"
+    ],
+    "observation_and_interpretation": "原始 Value Alliance 支持段落含 Vanilla Air，实际返回的较新成员列表未含它。模型逐个检查 Scoot/Cebu Pacific/Jeju/Nok/Cebgo，未走到 Vanilla Air → All Nippon 的标注链。既有候选偏航，也有在线与旧段落的成员信息差异。",
+    "confidence": "高",
+    "n": 28,
+    "id": "react-dev-00851",
+    "question": "What is the name of the company that wholly owns the Value Alliance airline whose head office is within Terminal 2 of Narita International Airport?",
+    "gold": "All Nippon",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 1,
+    "original_id": "5a820c0c554299676cceb1fc",
+    "trace_file": "../逐题轨迹/28-react-dev-00851.md",
+    "supporting_facts": [
+      {
+        "title": "Value Alliance",
+        "sent_id": 3,
+        "sentence": "It comprises seven Asia-Pacific airlines: Cebu Pacific, Jeju Air, Nok Air, NokScoot, Scoot, Tigerair Australia and Vanilla Air, along with Tigerair who merged with Scoot under the Scoot brand."
+      },
+      {
+        "title": "Vanilla Air",
+        "sent_id": 0,
+        "sentence": "Vanilla Air Inc. (バニラ・エア株式会社 , Banira Ea Kabushiki Kaisha ) is a low-cost airline in Japan wholly owned by All Nippon Airways."
+      },
+      {
+        "title": "Vanilla Air",
+        "sent_id": 1,
+        "sentence": "Its head office is within Terminal 2 of Narita International Airport in Narita, Chiba Prefecture."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 29,
+    "id": "react-dev-00200",
+    "question": "The 2000 British film Snatch was later adapted into a television series for what streaming service?",
+    "gold": "Crackle",
+    "prediction": "Crackle",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5adef80b5542993a75d263c4",
+    "trace_file": "../逐题轨迹/29-react-dev-00200.md",
+    "supporting_facts": [
+      {
+        "title": "Snatch (TV series)",
+        "sent_id": 0,
+        "sentence": "Snatch is a British/American television series based on the film of the same name, which debuted on Crackle on 16 March 2017."
+      },
+      {
+        "title": "Snatch (film)",
+        "sent_id": 1,
+        "sentence": "is a 2000 British crime comedy film written and directed by Guy Ritchie, featuring an ensemble cast."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "实体偏航",
+      "查询未命中",
+      "协议损耗"
+    ],
+    "observation_and_interpretation": "模型围绕泛称 World Games 和 David Lloyd 搜索，没有定位到标注的 Racquetball at the 1985 World Games，因此无法取得日期。第 1 次模拟多步输出被拒绝。",
+    "confidence": "高",
+    "n": 30,
+    "id": "react-dev-06849",
+    "question": "A British sports, health and leisure business hosted the World Games on what dates?",
+    "gold": "July 25 to August 4",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 1,
+    "original_id": "5ae25e835542992decbdccd1",
+    "trace_file": "../逐题轨迹/30-react-dev-06849.md",
+    "supporting_facts": [
+      {
+        "title": "Racquetball at the 1985 World Games",
+        "sent_id": 0,
+        "sentence": "The racquetball competition at the 1985 World Games took place from July 25 to August 4 in London, England."
+      },
+      {
+        "title": "David Lloyd Leisure",
+        "sent_id": 0,
+        "sentence": "David Lloyd Leisure is a British sports, health and leisure business that runs health clubs and gyms across Europe."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "实时页面信息缺失",
+      "工具状态误用"
+    ],
+    "observation_and_interpretation": "第 3 步定位到 Kerry Butler；但实际人物摘要为 Kerry Butler，原始标注首句为 Kerry Marie Butler。Lookup middle name 未命中，搜索 full name 未命中后再 Lookup 也因页面清空失败。可能涉及信息版本/检索覆盖，不能单凭加步数保证修复。",
+    "confidence": "高",
+    "n": 31,
+    "id": "react-dev-01720",
+    "question": "What was the middle name of the actress who was cast alongside Harvey Fierstein, Linda Hart, Dick Latessa, Clarke Thorell, Mary Bond Davis, Laura Bell Bundy, Matthew Morrison, Corey Reynolds, and Marissa Jaret Winokur in Hairspray?",
+    "gold": "Marie",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5ab1dcab5542993be8fa985e",
+    "trace_file": "../逐题轨迹/31-react-dev-01720.md",
+    "supporting_facts": [
+      {
+        "title": "Hairspray (2002 album)",
+        "sent_id": 2,
+        "sentence": "It features performances from the show's cast, which includes Harvey Fierstein, Linda Hart, Dick Latessa, Kerry Butler, Clarke Thorell, Mary Bond Davis, Laura Bell Bundy, Matthew Morrison, Corey Reynolds, and Marissa Jaret Winokur as the lead character of Tracy Turnblad."
+      },
+      {
+        "title": "Kerry Butler",
+        "sent_id": 0,
+        "sentence": "Kerry Marie Butler (born June 18, 1971) is an American actress known primarily for her work in theatre."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "题意歧义",
+      "工具状态误用"
+    ],
+    "observation_and_interpretation": "模型找到 Andrea Chénier，却试图寻找“第三幕的名称”；第 4 步候选已出现 La mamma morta，没有查询该候选，反而在空页面 Lookup。原始证据说 La mamma morta 是第三幕中的咏叹调，不是第三幕名称，题面表述与标注关系不严谨。",
+    "confidence": "高",
+    "n": 32,
+    "id": "react-dev-06709",
+    "question": "What is the name of the third act in a play where a character named Carlo Gérard is partly based on a revolutionary figure?",
+    "gold": "La mamma morta",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5ab29842554299194fa93420",
+    "trace_file": "../逐题轨迹/32-react-dev-06709.md",
+    "supporting_facts": [
+      {
+        "title": "La mamma morta",
+        "sent_id": 0,
+        "sentence": "\"La mamma morta \" (They killed my mother) is an aria from act 3 of the 1896 opera \"Andrea Chénier\" by Umberto Giordano."
+      },
+      {
+        "title": "Andrea Chénier",
+        "sent_id": 1,
+        "sentence": "It was first performed on 28 March 1896 at La Scala, Milan."
+      },
+      {
+        "title": "Andrea Chénier",
+        "sent_id": 3,
+        "sentence": "The character Carlo Gérard is partly based on Jean-Lambert Tallien, a leading figure in the Revolution."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 33,
+    "id": "react-dev-01885",
+    "question": "What star of Parks and Recreation appeared in November?",
+    "gold": "Nick Offerman",
+    "prediction": "Nick Offerman",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5a89bbb05542992e4fca83a3",
+    "trace_file": "../逐题轨迹/33-react-dev-01885.md",
+    "supporting_facts": [
+      {
+        "title": "November (2004 film)",
+        "sent_id": 0,
+        "sentence": "November is a 2004 American psychological thriller film first screened at the 2004 Sundance Film Festival."
+      },
+      {
+        "title": "November (2004 film)",
+        "sent_id": 2,
+        "sentence": "The film co-stars Michael Ealy, Nora Dunn, Anne Archer, Nick Offerman, and Matthew Carey."
+      },
+      {
+        "title": "Nick Offerman",
+        "sent_id": 0,
+        "sentence": "Nicholas \"Nick\" Offerman (born June 26, 1970) is an American actor, voice actor, producer, writer, comedian and carpenter widely known for his breakout role as Ron Swanson in the acclaimed NBC sitcom \"Parks and Recreation\", for which he received the Television Critics Association Award for Individual Achievement in Comedy."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 34,
+    "id": "react-dev-00807",
+    "question": "Alfie Allen played Theon Greyjoy on which show?",
+    "gold": "Game of Thrones",
+    "prediction": "Game of Thrones",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 1,
+    "original_id": "5a87e3d65542993e715abff8",
+    "trace_file": "../逐题轨迹/34-react-dev-00807.md",
+    "supporting_facts": [
+      {
+        "title": "Alfie Allen",
+        "sent_id": 0,
+        "sentence": "Alfie Allen (born 12 September 1986) is an English actor."
+      },
+      {
+        "title": "Theon Greyjoy",
+        "sent_id": 0,
+        "sentence": "Theon Greyjoy is a fictional character in the \"A Song of Ice and Fire\" series of fantasy novels by American author George R. R. Martin, and its television adaptation \"Game of Thrones\"."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 35,
+    "id": "react-dev-04050",
+    "question": "What nationality is the man who developed the dictator game?",
+    "gold": "Israeli-American",
+    "prediction": "Israeli-American",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5ade03c65542990dbb2f7f2e",
+    "trace_file": "../逐题轨迹/35-react-dev-04050.md",
+    "supporting_facts": [
+      {
+        "title": "Dictator game",
+        "sent_id": 0,
+        "sentence": "The dictator game is an experimental paradigm in psychology, similar to the ultimatum game, first developed by Daniel Kahneman and colleagues."
+      },
+      {
+        "title": "Daniel Kahneman",
+        "sent_id": 0,
+        "sentence": "Daniel Kahneman ( ; Hebrew: דניאל כהנמן‎ ‎ , born March 5, 1934) is an Israeli-American psychologist notable for his work on the psychology of judgment and decision-making, as well as behavioral economics, for which he was awarded the 2002 Nobel Memorial Prize in Economic Sciences (shared with Vernon L. Smith)."
+      }
+    ]
+  },
+  {
+    "primary": "表达或答案范围差异",
+    "secondary": [
+      "参考抽取范围较窄"
+    ],
+    "observation_and_interpretation": "实时页面明确列 English/German/French/Spanish，模型据此答四种；参考只写 French and English。重要的是原始支持句本身也说他后来 learned German and Spanish。这里存在参考抽取范围和人生阶段限定问题，不宜简单归因于模型凭空加语言。",
+    "confidence": "高",
+    "n": 36,
+    "id": "react-dev-03395",
+    "question": "What languages did the son of Sacagawea speak?",
+    "gold": "French and English",
+    "prediction": "English, German, French, and Spanish",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.7499999999999999,
+    "format_errors": 1,
+    "original_id": "5abba91e554299642a094b10",
+    "trace_file": "../逐题轨迹/36-react-dev-03395.md",
+    "supporting_facts": [
+      {
+        "title": "Charbonneau, Oregon",
+        "sent_id": 2,
+        "sentence": "The development was named for Jean Baptiste Charbonneau, the son of Sacagawea."
+      },
+      {
+        "title": "Jean Baptiste Charbonneau",
+        "sent_id": 1,
+        "sentence": "He spoke French and English, and learned German and Spanish during his six years in Europe from 1823 to 1829."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 37,
+    "id": "react-dev-03543",
+    "question": "The central figure used in the corporate branding of Singapore Airlines has been an element of it's marketing since what year?",
+    "gold": "1972",
+    "prediction": "1972",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5adfba9555429942ec259b1e",
+    "trace_file": "../逐题轨迹/37-react-dev-03543.md",
+    "supporting_facts": [
+      {
+        "title": "Singapore Airlines",
+        "sent_id": 1,
+        "sentence": "The airline uses the Singapore Girl as its central figure in its corporate branding."
+      },
+      {
+        "title": "Singapore Girl",
+        "sent_id": 0,
+        "sentence": "Singapore Girl is a consistent visual advertising slogan applied to depictions of flight attendants </small> of Singapore Airlines (SIA) dressed in the distinctive \"\"Sarong\" \"Kebaya\"\", SIA uniform since 1972 and remains a prominent element of SIA's marketing."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 38,
+    "id": "react-dev-07275",
+    "question": "Which actor and film director is from German Jewish descent, Kurt Gerron or Dell Henderson?",
+    "gold": "Kurt Gerron",
+    "prediction": "Kurt Gerron",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5ac0d1555542997d64295a5d",
+    "trace_file": "../逐题轨迹/38-react-dev-07275.md",
+    "supporting_facts": [
+      {
+        "title": "Dell Henderson",
+        "sent_id": 0,
+        "sentence": "George Delbert \"Dell\" Henderson (July 5, 1877 — December 2, 1956) was a Canadian-American actor, director, and writer."
+      },
+      {
+        "title": "Kurt Gerron",
+        "sent_id": 0,
+        "sentence": "Kurt Gerron (11 May 1897 – 28 October 1944) was a German Jewish actor and film director."
+      }
+    ]
+  },
+  {
+    "primary": "表达或答案范围差异",
+    "secondary": [
+      "简称与全称"
+    ],
+    "observation_and_interpretation": "模型答 Brotherly Leader，真实摘要与参考的长称号包含同一核心称谓，但省略国家全称等修饰。属于简称与参考长称号范围差异，保持原 EM=0，另行人工审查。",
+    "confidence": "高",
+    "n": 39,
+    "id": "react-dev-04330",
+    "question": "What was Muammar Mohammed Abu Minyar Gaddafi's title during the Libyan Civil War?",
+    "gold": "\"Brotherly Leader\" of the Great Socialist People's Libyan Arab Jamahiriya",
+    "prediction": "Brotherly Leader",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.3636363636363636,
+    "format_errors": 0,
+    "original_id": "5a72df275542992359bc31b3",
+    "trace_file": "../逐题轨迹/39-react-dev-04330.md",
+    "supporting_facts": [
+      {
+        "title": "Timeline of the 2011 Libyan Civil War",
+        "sent_id": 0,
+        "sentence": "The timeline of the Libyan Civil War begins on 15 February 2011 and ends on 20 October 2011."
+      },
+      {
+        "title": "Muammar Gaddafi",
+        "sent_id": 1,
+        "sentence": "He governed Libya as Revolutionary Chairman of the Libyan Arab Republic from 1969 to 1977, then as the \"Brotherly Leader\" of the Great Socialist People's Libyan Arab Jamahiriya from 1977 to 2011."
+      }
+    ]
+  },
+  {
+    "primary": "题意、关系或证据误读",
+    "secondary": [
+      "关系类型误读"
+    ],
+    "observation_and_interpretation": "模型找到了正确的 Postcolonialism，却用 overlaps with critical theory and cultural studies 回答 draws from what schools of thought。原标注句为 drawing from postmodern schools of thought。相关领域与理论来源是不同关系。",
+    "confidence": "高",
+    "n": 40,
+    "id": "react-dev-05503",
+    "question": "What schools of thought are drawn from in the academic discipline of Hafiz Rashid Khan?",
+    "gold": "postmodern schools of thought",
+    "prediction": "critical theory and cultural studies",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5a8661535542994775f60758",
+    "trace_file": "../逐题轨迹/40-react-dev-05503.md",
+    "supporting_facts": [
+      {
+        "title": "Hafiz Rashid Khan",
+        "sent_id": 0,
+        "sentence": "Hafiz Rashid Khan (Bengali: হাফিজ রশিদ খান , born June 23, 1961<ref name=\"ISNI/\"> </ref>) is a Bangladeshi postcolonialist poet, author, editor and journalist."
+      },
+      {
+        "title": "Hafiz Rashid Khan",
+        "sent_id": 2,
+        "sentence": "He is known for his postcolonialism, anti-military voice and was reputed for working in tribal area at Chittagong Hill Tracts in Bangladesh."
+      },
+      {
+        "title": "Postcolonialism",
+        "sent_id": 2,
+        "sentence": "Drawing from postmodern schools of thought, postcolonial studies analyze the politics of knowledge (creation, control, and distribution) by examining the functional relations of social and political power that sustain colonialism and neocolonialism—the imperial regime's depictions (social, political, cultural) of the colonizer and of the colonized."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "检索路径偏航",
+      "实时页面信息缺失"
+    ],
+    "observation_and_interpretation": "Di-Gata Defenders 当前页面 Lookup South Africa 未命中后，模型转到 Jetix 路线；原始支持证据指向 Nickelodeon (Africa) 及其 1.5 million households，实际轨迹没有到达该网络。",
+    "confidence": "高",
+    "n": 41,
+    "id": "react-dev-02811",
+    "question": "How many households does the network that Di-Gata Defenders plays on in South Africa reach?",
+    "gold": "1.5 million households",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5adf9ee75542992d7e9f93c0",
+    "trace_file": "../逐题轨迹/41-react-dev-02811.md",
+    "supporting_facts": [
+      {
+        "title": "Di-Gata Defenders",
+        "sent_id": 3,
+        "sentence": "in the UK, Disney XD in The Netherlands and Nickelodeon (KTV), (Nickelodeon (Africa)) in South Africa."
+      },
+      {
+        "title": "Nickelodeon (Africa)",
+        "sent_id": 1,
+        "sentence": "Nickelodeon currently reaches 1.5 million households in 49 countries across the continent."
+      }
+    ]
+  },
+  {
+    "primary": "同名实体选错",
+    "secondary": [
+      "同名实体混淆"
+    ],
+    "observation_and_interpretation": "模型选择 Andrew Preston (businessman), born 1846，与歌手 James Taylor (1948) 比较。标注中的 Andrew Preston 实际是 Isaac M. Taylor 的儿子、出生于 1983，与歌手同父异母。对象选错后年份计算可自洽，但不回答标注指定的人。",
+    "confidence": "高",
+    "n": 42,
+    "id": "react-dev-01320",
+    "question": "Who was older, Andrew Preston or James Taylor?",
+    "gold": "James Taylor",
+    "prediction": "Andrew Preston",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5ae0850055429945ae959396",
+    "trace_file": "../逐题轨迹/42-react-dev-01320.md",
+    "supporting_facts": [
+      {
+        "title": "Isaac M. Taylor",
+        "sent_id": 0,
+        "sentence": "Isaac Montrose Taylor (June 15, 1921 – November 3, 1996) was the dean of the Medical School of the University of North Carolina from 1964 until 1971, and the father of James Taylor, the singer and guitarist, and four other children, Alex, Livingston, Hugh, and Kate."
+      },
+      {
+        "title": "Isaac M. Taylor",
+        "sent_id": 1,
+        "sentence": "Through his second marriage to Suzanne Francis Sheats, he fathered three more children, Andrew Preston (1983), Theodore Haynes (1986), and Julia Rose (1989)."
+      },
+      {
+        "title": "James Taylor",
+        "sent_id": 0,
+        "sentence": "James Vernon Taylor (born March 12, 1948) is an American singer-songwriter and guitarist."
+      }
+    ]
+  },
+  {
+    "primary": "表达或答案范围差异",
+    "secondary": [
+      "实体别名"
+    ],
+    "observation_and_interpretation": "预测 Tiffany & Co.，参考 Tiffany’s。原始支持句明确说明 Tiffany & Company colloquially Tiffany or Tiffany’s，同一实体别名有直接依据。原 EM/F1 均为 0，但不能据此说选错珠宝商。",
+    "confidence": "高",
+    "n": 43,
+    "id": "react-dev-02609",
+    "question": "Ruth Vollmer begins work designing window displays for which American luxury jewelry and specialty retailer, headquartered in New York City",
+    "gold": "Tiffany's",
+    "prediction": "Tiffany & Co.",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 1,
+    "original_id": "5a8b4fcc55429949d91db541",
+    "trace_file": "../逐题轨迹/43-react-dev-02609.md",
+    "supporting_facts": [
+      {
+        "title": "Ruth Vollmer",
+        "sent_id": 8,
+        "sentence": "Ruth begins work designing window displays for Bonwit Teller, Tiffany's, Lord & Taylor, and other department stores."
+      },
+      {
+        "title": "Tiffany &amp; Co.",
+        "sent_id": 0,
+        "sentence": "Tiffany & Company (known colloquially as Tiffany or Tiffany's) is an American luxury jewelry and specialty retailer, headquartered in New York City."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 44,
+    "id": "react-dev-05291",
+    "question": "Are John O'Hara and Rabindranath Tagore the same nationality?",
+    "gold": "no",
+    "prediction": "No",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5abba3255542996cc5e4a031",
+    "trace_file": "../逐题轨迹/44-react-dev-05291.md",
+    "supporting_facts": [
+      {
+        "title": "John O'Hara",
+        "sent_id": 0,
+        "sentence": "John Henry O'Hara (January 31, 1905 – April 11, 1970) was an American writer, best remembered as a keen observer of social status and manners in early to mid 20th century America and pre-eminent among his contemporaries at depicting social realism."
+      },
+      {
+        "title": "Rabindranath Tagore",
+        "sent_id": 0,
+        "sentence": "Rabindranath Tagore FRAS ( ; ] ), also written Ravīndranātha Thākura (7 May 1861 – 7 August 1941), sobriquet Gurudev, was a Bengali polymath who reshaped Bengali literature and music, as well as Indian art with Contextual Modernism in the late 19th and early 20th centuries."
+      }
+    ]
+  },
+  {
+    "primary": "步数耗尽，未提交",
+    "secondary": [
+      "同名歌曲混淆",
+      "题面名称差异",
+      "协议损耗"
+    ],
+    "observation_and_interpretation": "模型选中 No Problem (Chance the Rapper song)，后来发现 Chicago 与 New York 条件矛盾，但未定位正确对象。标注实际使用 No Problems (song) → Azealia Banks → Harlem，题面是单数 No Problem，增加了消歧难度。",
+    "confidence": "高",
+    "n": 45,
+    "id": "react-dev-04152",
+    "question": "In which part of New York was the singer who released the song No Problem raised ?",
+    "gold": "Harlem",
+    "prediction": "",
+    "status": "max_steps",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 1,
+    "original_id": "5ac4d717554299076e296e0e",
+    "trace_file": "../逐题轨迹/45-react-dev-04152.md",
+    "supporting_facts": [
+      {
+        "title": "No Problems (song)",
+        "sent_id": 0,
+        "sentence": "\"No Problems\" is a song released by American rapper Azealia Banks."
+      },
+      {
+        "title": "Azealia Banks",
+        "sent_id": 1,
+        "sentence": "Raised in the Harlem neighborhood of New York City, Banks began releasing music through MySpace in 2008, eventually being signed to XL Recordings at age 17."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 46,
+    "id": "react-dev-04506",
+    "question": "What city does the company that owns Bumble and bumble have its headquarters in?",
+    "gold": "New York City",
+    "prediction": "New York City",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 1,
+    "original_id": "5adfed5e55429942ec259b92",
+    "trace_file": "../逐题轨迹/46-react-dev-04506.md",
+    "supporting_facts": [
+      {
+        "title": "Bumble and bumble",
+        "sent_id": 0,
+        "sentence": "Bumble and bumble Products, LLC is one of 27 brands owned by Estée Lauder Companies, Inc."
+      },
+      {
+        "title": "Estée Lauder Companies",
+        "sent_id": 1,
+        "sentence": "The company owns a diverse portfolio of brands, distributed internationally through retail channels and digital commerce, and has its headquarters in Midtown Manhattan, New York City."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 47,
+    "id": "react-dev-02521",
+    "question": "Who was the director of the 2007 American action film starring the actress, professionally known as Maggie Q.?",
+    "gold": "Len Wiseman",
+    "prediction": "Len Wiseman",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 1,
+    "original_id": "5ade09945542997545bbbe2c",
+    "trace_file": "../逐题轨迹/47-react-dev-02521.md",
+    "supporting_facts": [
+      {
+        "title": "Maggie Q",
+        "sent_id": 0,
+        "sentence": "Margaret Denise Quigley (born May 22, 1979), professionally known as Maggie Q, is an American actress and model."
+      },
+      {
+        "title": "Maggie Q",
+        "sent_id": 1,
+        "sentence": "She is known for starring in the action films \"\" and \"Live Free or Die Hard\" and played the title role of The CW's action-thriller series \"Nikita\", airing from 2010 to 2013."
+      },
+      {
+        "title": "Live Free or Die Hard",
+        "sent_id": 1,
+        "sentence": "The film was directed by Len Wiseman and stars Bruce Willis as John McClane."
+      }
+    ]
+  },
+  {
+    "primary": "实时与标注数值差异",
+    "secondary": [
+      "同年数值冲突"
+    ],
+    "observation_and_interpretation": "模型正确定位 Shillong，实际摘要写 2011 census 143,229；原始标注同样指 2011 census，却为 143,007。不能用“一个是更新年份”解释同年差异；应进一步查统计口径或页面修订，本次仅确认数值不一致。",
+    "confidence": "高",
+    "n": 48,
+    "id": "react-dev-01560",
+    "question": "According to the 2011 census what is the population of the city where Royal Wahingdoh F.C. are based ?",
+    "gold": "143,007",
+    "prediction": "143,229",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.0,
+    "format_errors": 0,
+    "original_id": "5ac5484d5542994611c8b48d",
+    "trace_file": "../逐题轨迹/48-react-dev-01560.md",
+    "supporting_facts": [
+      {
+        "title": "Royal Wahingdoh F.C.",
+        "sent_id": 0,
+        "sentence": "Royal Wahingdoh Football Club is a men's professional football club based in Shillong, Meghalaya that participates in the Indian I-League."
+      },
+      {
+        "title": "Shillong",
+        "sent_id": 2,
+        "sentence": "Shillong is the 330th most populous city in India with a population of 143,007 according to the 2011 census."
+      }
+    ]
+  },
+  {
+    "primary": "表达或答案范围差异",
+    "secondary": [
+      "数量限定缺失"
+    ],
+    "observation_and_interpretation": "模型答 dice，参考 a pair of dice。原始支持句为一对骰子，真实工具句也写 two dice。核心游戏用具相同但预测省略数量，是否接受应由预先规定的语义评分规则决定，不事后加分。",
+    "confidence": "高",
+    "n": 49,
+    "id": "react-dev-06916",
+    "question": "The term snake eyes is used in a particular casino game that uses what game pieces?",
+    "gold": "a pair of dice",
+    "prediction": "dice",
+    "status": "finished",
+    "em": 0.0,
+    "f1": 0.5,
+    "format_errors": 0,
+    "original_id": "5a7f8b8c5542995d8a8ddea1",
+    "trace_file": "../逐题轨迹/49-react-dev-06916.md",
+    "supporting_facts": [
+      {
+        "title": "Snake eyes",
+        "sent_id": 0,
+        "sentence": "In gambling in general and the game of Craps in particular, snake eyes is the outcome of rolling the dice in a game and getting only one pip on each die."
+      },
+      {
+        "title": "Craps",
+        "sent_id": 0,
+        "sentence": "Craps is a dice game in which the players make wagers on the outcome of the roll, or a series of rolls, of a pair of dice."
+      }
+    ]
+  },
+  {
+    "primary": "EM通过",
+    "secondary": [],
+    "observation_and_interpretation": "与参考答案标准化后精确匹配。本分析不把它等同于每个中间条件都已独立证明。",
+    "confidence": "高（仅指匹配事实）",
+    "n": 50,
+    "id": "react-dev-05679",
+    "question": "What country is the Selun located in?",
+    "gold": "Switzerland",
+    "prediction": "Switzerland",
+    "status": "finished",
+    "em": 1.0,
+    "f1": 1.0,
+    "format_errors": 0,
+    "original_id": "5a7a5aea5542996c55b2dd6f",
+    "trace_file": "../逐题轨迹/50-react-dev-05679.md",
+    "supporting_facts": [
+      {
+        "title": "Selun",
+        "sent_id": 0,
+        "sentence": "The Selun is one of the peaks of the Churfirsten range, located in the Appenzell Alps."
+      },
+      {
+        "title": "Selun",
+        "sent_id": 1,
+        "sentence": "It lies between the valley of Toggenburg and Lake Walenstadt in the canton of St. Gallen."
+      },
+      {
+        "title": "Canton of St. Gallen",
+        "sent_id": 0,
+        "sentence": "The canton of St. Gallen (German: \"Kanton St. Gallen\"    ; dialectally /saŋkˈalːə/ , French: \"Canton de Saint-Gall\" , Italian: \"Canton San Gallo\" , Romansh: \"Chantun Son Gagl\" ) is a canton of Switzerland."
+      }
+    ]
+  }
+]
