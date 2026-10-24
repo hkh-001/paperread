@@ -2,7 +2,7 @@
 
 题目 ID：`react-dev-03618`
 
-What does the organization associated with Carl Wieland believe about anything other than the young earth view? 
+What does the organization associated with Carl Wieland believe about anything other than the young earth view?
 
 参考答案：a compromise on biblical inerrancy
 
@@ -28,7 +28,7 @@ Final: Noria
 ```
 
 ```text
-user: Question: What does the organization associated with Carl Wieland believe about anything other than the young earth view? 
+user: Question: What does the organization associated with Carl Wieland believe about anything other than the young earth view?
 ```
 
 
@@ -55,7 +55,7 @@ Final: Noria
 ```
 
 ```text
-user: Question: What does the organization associated with Carl Wieland believe about anything other than the young earth view? 
+user: Question: What does the organization associated with Carl Wieland believe about anything other than the young earth view?
 ```
 
 
@@ -198,5 +198,5 @@ Action: Finish[Noria]
 ```
 
 ```text
-user: Question: What does the organization associated with Carl Wieland believe about anything other than the young earth view? 
+user: Question: What does the organization associated with Carl Wieland believe about anything other than the young earth view?
 ```
