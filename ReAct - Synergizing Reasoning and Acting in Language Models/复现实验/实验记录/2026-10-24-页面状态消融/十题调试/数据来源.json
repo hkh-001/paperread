@@ -1,0 +1,7 @@
+{
+  "source_url": "https://raw.githubusercontent.com/ysymyth/ReAct/6bdb3a1fd38b8188fc7ba4102969fe483df8fdc9/data/hotpot_dev_v1_simplified.json",
+  "source_content_hash": "dd8f0bcf96b87bb12532e2d7b7fdf5ccca6fa7e3f5b76662bcff70d0f07eeea9",
+  "downloaded_at": "2026-10-23T08:20:14.312354+00:00",
+  "license": "HotpotQA CC BY-SA 4.0",
+  "transformation": "Added react-dev-index IDs; IDs are not original HotpotQA IDs"
+}

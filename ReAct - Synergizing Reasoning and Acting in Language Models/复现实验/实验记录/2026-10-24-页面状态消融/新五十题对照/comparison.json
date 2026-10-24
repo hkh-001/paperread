@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "groups": {
+    "react_baseline": {
+      "empty_page_lookups": 2,
+      "format_errors": 17,
+      "max_steps": 8,
+      "tool_errors": 0,
+      "llm_calls": 212,
+      "tool_calls": 153,
+      "prompt_tokens": 106403,
+      "completion_tokens": 8521,
+      "n": 50,
+      "em": 0.42,
+      "f1": 0.5744675324675325
+    },
+    "react_state": {
+      "empty_page_lookups": 1,
+      "format_errors": 7,
+      "max_steps": 10,
+      "tool_errors": 0,
+      "llm_calls": 207,
+      "tool_calls": 160,
+      "prompt_tokens": 131525,
+      "completion_tokens": 7242,
+      "n": 50,
+      "em": 0.46,
+      "f1": 0.5904848484848485
+    }
+  },
+  "paired_n": 50,
+  "state_only_correct": 3,
+  "baseline_only_correct": 1,
+  "mcnemar_exact_two_sided_p": 0.625
+}

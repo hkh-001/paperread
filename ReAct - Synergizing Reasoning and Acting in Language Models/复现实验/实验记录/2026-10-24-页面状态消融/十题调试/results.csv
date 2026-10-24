@@ -1,0 +1,21 @@
+﻿method,id,status,prediction,gold,em,f1,llm_calls,tool_calls,format_errors,seconds,prompt_tokens,completion_tokens
+react_baseline,react-dev-01551,finished,Nanette Burstein,Nanette Burstein,1.0,1.0,3,2,0,4.887,1327,75
+react_baseline,react-dev-02544,finished,No,no,1.0,1.0,4,2,1,7.084,1757,177
+react_baseline,react-dev-06238,finished,"Seth MacFarlane, Mike Barker and Matt Weitzman",Seth MacFarlane,0.0,0.4444444444444445,4,2,1,7.421,1701,208
+react_baseline,react-dev-03522,finished,James Worthy,James Worthy,1.0,1.0,6,3,2,11.195,2559,356
+react_baseline,react-dev-03687,max_steps,,Beyond the Clouds,0.0,0.0,7,6,1,13.576,3214,333
+react_baseline,react-dev-05388,finished,torpedoes,torpedoes,1.0,1.0,2,1,0,3.534,870,91
+react_baseline,react-dev-01557,max_steps,,duck,0.0,0.0,7,7,0,15.949,3953,198
+react_baseline,react-dev-03824,finished,Bill Clinton,Bill Clinton,1.0,1.0,4,2,1,7.972,1619,252
+react_baseline,react-dev-02866,finished,1931,1909,0.0,0.0,7,6,0,16.738,4378,223
+react_baseline,react-dev-05762,finished,Joint Chiefs of Staff,Joint Chiefs of Staff,1.0,1.0,3,2,0,5.276,1387,75
+react_state,react-dev-01551,finished,Nanette Burstein,Nanette Burstein,1.0,1.0,3,2,0,5.371,1569,81
+react_state,react-dev-02544,finished,No,no,1.0,1.0,3,2,0,4.327,1680,79
+react_state,react-dev-06238,finished,"Seth MacFarlane, Mike Barker and Matt Weitzman",Seth MacFarlane,0.0,0.4444444444444445,3,2,0,5.011,1606,73
+react_state,react-dev-03522,finished,James Worthy,James Worthy,1.0,1.0,4,3,0,7.656,2265,105
+react_state,react-dev-03687,max_steps,,Beyond the Clouds,0.0,0.0,7,6,1,17.153,4621,411
+react_state,react-dev-05388,finished,torpedoes,torpedoes,1.0,1.0,3,1,1,6.188,1415,274
+react_state,react-dev-01557,max_steps,,duck,0.0,0.0,7,7,0,19.934,5390,480
+react_state,react-dev-03824,finished,Bill Clinton,Bill Clinton,1.0,1.0,3,2,0,5.546,1507,89
+react_state,react-dev-02866,finished,1931,1909,0.0,0.0,5,4,0,12.528,3230,187
+react_state,react-dev-05762,finished,Joint Chiefs of Staff,Joint Chiefs of Staff,1.0,1.0,3,2,0,4.892,1615,75

@@ -1,0 +1,101 @@
+﻿method,id,status,prediction,gold,em,f1,llm_calls,tool_calls,format_errors,seconds,prompt_tokens,completion_tokens
+react_baseline,react-dev-06527,finished,Yes,yes,1.0,1.0,4,2,1,7.31,1700,222
+react_baseline,react-dev-03459,finished,Amway Corporation,American Way,0.0,0.0,3,1,1,6.484,1031,123
+react_baseline,react-dev-01224,max_steps,,Hong Kong,0.0,0.0,7,7,0,13.654,4865,229
+react_baseline,react-dev-03477,finished,across England and Scotland,England and Scotland,0.0,0.8571428571428571,2,1,0,4.3,835,58
+react_baseline,react-dev-07278,finished,John William Henry II,John William Henry II,1.0,1.0,4,3,0,7.188,1872,124
+react_baseline,react-dev-01129,max_steps,,Winter Haven Mall,0.0,0.0,7,6,1,20.172,3511,481
+react_baseline,react-dev-03642,finished,Ozzie Newsome,Ozzie Newsome Jr.,0.0,0.8,4,2,1,11.6,1532,203
+react_baseline,react-dev-04586,finished,Venus,Venus,1.0,1.0,3,2,0,4.844,1341,80
+react_baseline,react-dev-02748,finished,Germany,German service cartridge,0.0,0.0,2,1,0,3.688,792,46
+react_baseline,react-dev-01114,finished,Wale,Wale,1.0,1.0,2,1,0,4.708,835,67
+react_baseline,react-dev-03253,finished,Victorian England in the 1860s,Victorian England,0.0,0.6666666666666666,4,3,0,9.266,1782,85
+react_baseline,react-dev-05965,finished,15 miles,15,0.0,0.6666666666666666,3,2,0,5.594,1379,71
+react_baseline,react-dev-03124,finished,fourth generation,4th,0.0,0.0,5,3,1,9.623,2345,295
+react_baseline,react-dev-01614,finished,Saint Petersburg Conservatory,Saint Petersburg Conservatory,1.0,1.0,3,2,0,4.914,1359,89
+react_baseline,react-dev-05747,finished,CTV Television Network,CTV,0.0,0.5,4,3,0,10.323,1884,105
+react_baseline,react-dev-06090,finished,Yes,yes,1.0,1.0,3,2,0,7.277,1384,58
+react_baseline,react-dev-05630,finished,"Minnesota State University, Mankato",Minnesota State Mavericks,0.0,0.5714285714285715,5,4,0,12.799,2673,160
+react_baseline,react-dev-00416,finished,Krusty the Clown,The Itchy & Scratchy Show,0.0,0.0,2,1,0,3.801,758,51
+react_baseline,react-dev-02033,finished,269,500-room,0.0,0.0,7,6,0,19.744,4404,255
+react_baseline,react-dev-07100,finished,musician,singer,0.0,0.0,4,2,1,9.154,1618,176
+react_baseline,react-dev-03725,finished,Mariaan de Swardt,Mariaan de Swardt,1.0,1.0,2,1,0,4.629,757,50
+react_baseline,react-dev-02287,finished,Raffaella Reggi,Raffaella Reggi,1.0,1.0,3,2,0,7.371,1484,101
+react_baseline,react-dev-05071,max_steps,,Diamond White,0.0,0.0,7,7,0,22.1,4511,172
+react_baseline,react-dev-05711,finished,The Social Network,The Social Network,1.0,1.0,5,3,1,19.286,2847,1136
+react_baseline,react-dev-07260,max_steps,,the second half of the third season,0.0,0.0,7,7,0,22.43,4468,185
+react_baseline,react-dev-02294,max_steps,,Conference USA,0.0,0.0,7,7,0,21.87,4342,215
+react_baseline,react-dev-01757,finished,Alfred Hitchcock,Alfred Hitchcock,1.0,1.0,7,2,4,15.869,2679,527
+react_baseline,react-dev-06519,finished,Homer Hickam,"Homer Hickam, Jr.",0.0,0.8,4,3,0,10.709,1742,131
+react_baseline,react-dev-00923,finished,Yes,yes,1.0,1.0,4,3,0,10.906,1851,83
+react_baseline,react-dev-01548,finished,No,no,1.0,1.0,4,3,0,7.414,1909,115
+react_baseline,react-dev-06524,max_steps,,"McComb, Mississippi",0.0,0.0,7,7,0,16.802,4401,168
+react_baseline,react-dev-06800,finished,about 20 percent of the Southern Hemisphere,14 million km,0.0,0.0,5,4,0,9.003,2801,147
+react_baseline,react-dev-04116,max_steps,,2009,0.0,0.0,7,7,0,18.674,3967,196
+react_baseline,react-dev-05980,finished,Merck,Merck & Co.,0.0,0.6666666666666666,3,2,0,5.576,1254,66
+react_baseline,react-dev-06404,finished,14 December 1990,14 December 1990,1.0,1.0,4,3,0,6.392,1803,90
+react_baseline,react-dev-01009,finished,Argentine,Argentinian,0.0,0.0,3,1,1,6.914,1138,100
+react_baseline,react-dev-06696,finished,86 feet,86 ft,0.0,0.5,4,3,0,11.631,1918,92
+react_baseline,react-dev-03498,finished,flowering plants,flowering plants,1.0,1.0,4,2,1,7.592,1622,211
+react_baseline,react-dev-04592,finished,5,"five times,",0.0,0.0,5,4,0,12.758,2742,175
+react_baseline,react-dev-04097,finished,Girl Meets World,Girl Meets World,1.0,1.0,2,1,0,8.697,727,54
+react_baseline,react-dev-02823,finished,InStyle,InStyle,1.0,1.0,4,2,1,7.678,1593,205
+react_baseline,react-dev-06669,finished,Kansas Joe McCoy and Memphis Minnie,Joe McCoy and Memphis Minnie,0.0,0.9090909090909091,4,1,2,12.383,1522,242
+react_baseline,react-dev-01107,finished,"College Park, Maryland","Prince George's County, Maryland",0.0,0.28571428571428575,3,2,0,5.802,1341,72
+react_baseline,react-dev-05016,finished,2017,2017,1.0,1.0,5,3,1,10.701,2590,321
+react_baseline,react-dev-02319,finished,Louise,Louise,1.0,1.0,3,2,0,5.313,1414,75
+react_baseline,react-dev-00716,max_steps,,Tim Allen,0.0,0.0,7,7,0,21.591,4172,157
+react_baseline,react-dev-03594,finished,Dave Brockie,Dave Brockie,1.0,1.0,3,2,0,5.325,1451,91
+react_baseline,react-dev-02733,finished,Joseph Conrad,Joseph Conrad,1.0,1.0,5,4,0,13.355,2777,150
+react_baseline,react-dev-06586,finished,Port of Boston,Port of Boston,1.0,1.0,3,2,0,7.848,1455,112
+react_baseline,react-dev-01781,finished,the North American tour with Ravi Shankar,American tour,0.0,0.5,3,2,0,9.384,1225,104
+react_state,react-dev-06527,finished,Yes,yes,1.0,1.0,3,2,0,7.121,1603,89
+react_state,react-dev-03459,finished,Amway Corporation,American Way,0.0,0.0,2,1,0,2.974,830,43
+react_state,react-dev-01224,max_steps,,Hong Kong,0.0,0.0,7,7,0,22.225,5867,198
+react_state,react-dev-03477,finished,across England and Scotland,England and Scotland,0.0,0.8571428571428571,2,1,0,3.599,937,47
+react_state,react-dev-07278,finished,John William Henry II,John William Henry II,1.0,1.0,4,3,0,11.846,2242,122
+react_state,react-dev-01129,max_steps,,Winter Haven Mall,0.0,0.0,7,7,0,15.327,4937,160
+react_state,react-dev-03642,finished,Ozzie Newsome,Ozzie Newsome Jr.,0.0,0.8,3,2,0,5.456,1410,63
+react_state,react-dev-04586,finished,Venus,Venus,1.0,1.0,3,2,0,7.753,1588,86
+react_state,react-dev-02748,finished,Germany,German service cartridge,0.0,0.0,2,1,0,4.749,927,71
+react_state,react-dev-01114,finished,Wale,Wale,1.0,1.0,3,1,1,5.985,1377,168
+react_state,react-dev-03253,finished,Victorian England in the 1860s,Victorian England,0.0,0.6666666666666666,4,3,0,6.92,2172,89
+react_state,react-dev-05965,finished,15 miles,15,0.0,0.6666666666666666,3,2,0,7.779,1611,71
+react_state,react-dev-03124,finished,fourth generation,4th,0.0,0.0,4,3,0,9.078,2358,87
+react_state,react-dev-01614,finished,Saint Petersburg Conservatory,Saint Petersburg Conservatory,1.0,1.0,4,3,0,12.285,2209,105
+react_state,react-dev-05747,finished,CTV,CTV,1.0,1.0,3,2,0,5.459,1409,85
+react_state,react-dev-06090,finished,Yes,yes,1.0,1.0,3,2,0,5.345,1616,62
+react_state,react-dev-05630,finished,"Minnesota State University, Mankato",Minnesota State Mavericks,0.0,0.5714285714285715,4,3,0,6.679,2345,151
+react_state,react-dev-00416,finished,Krusty the Clown,The Itchy & Scratchy Show,0.0,0.0,2,1,0,4.112,871,53
+react_state,react-dev-02033,max_steps,,500-room,0.0,0.0,7,7,0,18.984,5432,255
+react_state,react-dev-07100,finished,Musician/singer,singer,0.0,0.0,3,2,0,4.88,1517,67
+react_state,react-dev-03725,finished,Mariaan de Swardt,Mariaan de Swardt,1.0,1.0,2,1,0,3.473,875,61
+react_state,react-dev-02287,finished,Raffaella Reggi,Raffaella Reggi,1.0,1.0,3,2,0,5.293,1715,101
+react_state,react-dev-05071,max_steps,,Diamond White,0.0,0.0,7,7,0,14.39,5384,140
+react_state,react-dev-05711,max_steps,,The Social Network,0.0,0.0,7,7,0,19.649,6760,575
+react_state,react-dev-07260,max_steps,,the second half of the third season,0.0,0.0,7,7,0,15.256,5668,244
+react_state,react-dev-02294,max_steps,,Conference USA,0.0,0.0,7,7,0,20.985,5764,338
+react_state,react-dev-01757,finished,Alfred Hitchcock,Alfred Hitchcock,1.0,1.0,4,2,1,7.099,1982,172
+react_state,react-dev-06519,finished,Homer Hickam,"Homer Hickam, Jr.",0.0,0.8,3,2,0,5.314,1388,108
+react_state,react-dev-00923,finished,Yes,yes,1.0,1.0,5,4,0,9.294,3023,136
+react_state,react-dev-01548,finished,No,no,1.0,1.0,5,4,0,13.569,3011,116
+react_state,react-dev-06524,finished,"McComb, Mississippi","McComb, Mississippi",1.0,1.0,5,4,0,8.198,3291,99
+react_state,react-dev-06800,finished,about 20 percent of the Southern Hemisphere (14 million km² for the continent),14 million km,0.0,0.28571428571428575,5,4,0,11.878,3476,215
+react_state,react-dev-04116,max_steps,,2009,0.0,0.0,7,7,0,20.975,4896,189
+react_state,react-dev-05980,finished,Merck & Co.,Merck & Co.,1.0,1.0,6,5,0,18.022,4100,148
+react_state,react-dev-06404,finished,14 December 1990,14 December 1990,1.0,1.0,4,3,0,11.127,2184,90
+react_state,react-dev-01009,finished,Argentine,Argentinian,0.0,0.0,2,1,0,3.275,921,42
+react_state,react-dev-06696,finished,86 feet,86 ft,0.0,0.5,4,3,0,7.063,2309,100
+react_state,react-dev-03498,finished,flowering plants,flowering plants,1.0,1.0,4,2,1,12.875,2011,229
+react_state,react-dev-04592,max_steps,,"five times,",0.0,0.0,7,7,0,17.608,5788,352
+react_state,react-dev-04097,finished,Girl Meets World,Girl Meets World,1.0,1.0,2,1,0,4.271,833,47
+react_state,react-dev-02823,finished,InStyle,InStyle,1.0,1.0,3,2,0,7.756,1487,78
+react_state,react-dev-06669,finished,Kansas Joe McCoy and Memphis Minnie,Joe McCoy and Memphis Minnie,0.0,0.9090909090909091,3,1,1,6.288,1385,159
+react_state,react-dev-01107,finished,"College Park, Maryland","Prince George's County, Maryland",0.0,0.28571428571428575,3,2,0,7.093,1579,76
+react_state,react-dev-05016,finished,2017,2017,1.0,1.0,3,1,1,7.04,1430,250
+react_state,react-dev-02319,finished,Louise,Louise,1.0,1.0,3,2,0,7.707,1635,75
+react_state,react-dev-00716,max_steps,,Tim Allen,0.0,0.0,7,7,0,21.665,4901,158
+react_state,react-dev-03594,finished,Dave Brockie,Dave Brockie,1.0,1.0,3,2,0,7.021,1677,84
+react_state,react-dev-02733,finished,Joseph Conrad,Joseph Conrad,1.0,1.0,4,2,1,8.272,2251,151
+react_state,react-dev-06586,finished,Port of Boston,Port of Boston,1.0,1.0,6,4,1,14.371,5101,507
+react_state,react-dev-01781,finished,"Dark Horse was not a Beatles album; it was George Harrison's, associated with his 1974 North American tour with Ravi Shankar.",American tour,0.0,0.18181818181818182,3,2,0,5.556,1442,130

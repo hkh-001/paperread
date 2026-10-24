@@ -118,6 +118,52 @@ class LabTests(unittest.TestCase):
         self.assertTrue(all('FAKE_' not in json.dumps(request) for request in client.requests))
         self.assertIn('FAKE_3', result['trace'][2]['raw_output'])
 
+    def test_state_feedback_tracks_search_failure_and_does_not_mask_invalid_lookup(self):
+        class Client:
+            def __init__(self):
+                self.requests = []
+            def complete(self, messages):
+                self.requests.append(copy.deepcopy(messages))
+                outputs = ['Search[One]', 'Search[Missing]', 'Lookup[key]', 'Finish[Verified]']
+                return 'Thought: Check evidence.\nAction: ' + outputs[len(self.requests)-1], {}
+        client = Client()
+        result = lab.solve(client, 'react', 'question',
+                           lab.Environment(lab.LocalStore({'One': 'Key evidence.'})), args(state_feedback=True))
+        self.assertIn('current_page=null', client.requests[0][-1]['content'])
+        self.assertIn('current_page="One"', client.requests[1][-1]['content'])
+        self.assertIn('current_page=null', client.requests[2][-1]['content'])
+        self.assertIn('No current page', result['trace'][2]['observation'])
+        self.assertEqual(result['llm_calls'], 4)
+        self.assertEqual(result['prediction'], 'Verified')
+
+    def test_state_feedback_uses_live_state_after_format_rejection(self):
+        class Client:
+            def __init__(self): self.requests = []
+            def complete(self, messages):
+                self.requests.append(copy.deepcopy(messages))
+                outputs = ['Thought: Find.\nAction: Search[One]',
+                           'Thought: Fake.\nAction: Search[Missing]\nObservation: FAKE_SENTINEL',
+                           'Thought: Finish.\nAction: Finish[Verified]']
+                return outputs[len(self.requests)-1], {}
+        client = Client()
+        lab.solve(client, 'react', 'question', lab.Environment(lab.LocalStore({'One':'Key.'})),
+                  args(state_feedback=True))
+        self.assertIn('current_page="One"', client.requests[2][-1]['content'])
+        self.assertNotIn('FAKE_SENTINEL', json.dumps(client.requests[2]))
+
+    def test_state_feedback_is_opt_in_and_does_not_change_direct_cot(self):
+        for method in ('direct','cot','react'):
+            class Client:
+                def __init__(self): self.requests = []
+                def complete(self, messages):
+                    self.requests.append(copy.deepcopy(messages))
+                    return ('Thought: Finish.\nAction: Finish[Verified]' if method=='react'
+                            else 'Final: Verified'), {}
+            client=Client()
+            lab.solve(client, method, 'q', lab.Environment(lab.LocalStore({})),
+                      args(state_feedback=method!='react'))
+            self.assertNotIn('Tool state:', json.dumps(client.requests))
+
     def test_api_failure_preserves_trace(self):
         class Bad:
             def complete(self, messages):

@@ -1,0 +1,20 @@
+{
+  "source": "/Users/hkh/Documents/Obsidian Vault/paper/ReAct - Synergizing Reasoning and Acting in Language Models/复现实验/data/hotpot_dev_react.json",
+  "source_sha256": "062d40f6dd76530ecde478003f03c7392d14f625449e3a15c401ba5cd34c0ab5",
+  "seed": 233,
+  "offset": 0,
+  "limit": 10,
+  "ids": [
+    "react-dev-03687",
+    "react-dev-06238",
+    "react-dev-05388",
+    "react-dev-03522",
+    "react-dev-03824",
+    "react-dev-02866",
+    "react-dev-01551",
+    "react-dev-02544",
+    "react-dev-01557",
+    "react-dev-05762"
+  ],
+  "license": "HotpotQA: CC BY-SA 4.0 (when using official data)"
+}

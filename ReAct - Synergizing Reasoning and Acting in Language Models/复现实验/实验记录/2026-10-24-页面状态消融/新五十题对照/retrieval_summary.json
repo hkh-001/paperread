@@ -1,0 +1,8 @@
+{
+  "network_attempts": 191,
+  "http_429": 0,
+  "retry_attempts": 0,
+  "cache_hits": 112,
+  "wait_seconds": 25.138,
+  "incomplete_log_lines": 0
+}

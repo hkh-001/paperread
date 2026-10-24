@@ -14,3 +14,4 @@ python3 react_lab.py run --mock --methods direct cot react act --out runs/01-smo
 - [主程序](react_lab.py)
 - [可编辑提示词](prompts.json)
 - [软件验证记录](验证记录.md)
+- [页面状态提示的配对实验](实验记录/2026-10-24-页面状态消融/实验方案.md)：可选 `--state-feedback`；原版默认不变。

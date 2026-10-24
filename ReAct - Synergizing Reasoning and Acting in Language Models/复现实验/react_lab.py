@@ -224,8 +224,18 @@ def make_messages(method, question):
             {'role': 'user', 'content': 'Question: ' + question}]
 
 
+def page_state_feedback(env):
+    """Expose only actual tool state, never a suggested entity or gold answer."""
+    return ('Tool state: current_page=' + json.dumps(env.title if env.page else None, ensure_ascii=False)
+            + '. Lookup searches only the current page. A failed Search clears the current page. '
+              'If current_page is null, use Search before Lookup.')
+
+
 def solve(client, method, question, env, args):
     messages = make_messages(method, question)
+    state_feedback = getattr(args, 'state_feedback', False) and method in ('react', 'act')
+    if state_feedback:
+        messages[1]['content'] += '\n' + page_state_feedback(env)
     trace, answer, status = [], '', 'max_steps'
     max_calls = 1 if method in ('direct', 'cot') else args.max_steps
     for step in range(1, max_calls + 1):
@@ -258,7 +268,10 @@ def solve(client, method, question, env, args):
             if method in ('direct', 'cot'):
                 status = 'format_error'
                 break
-            messages.append({'role': 'user', 'content': 'Format error: ' + str(exc)})
+            feedback = 'Format error: ' + str(exc)
+            if state_feedback:
+                feedback += '\n' + page_state_feedback(env)
+            messages.append({'role': 'user', 'content': feedback})
             continue
         event['accepted_to_context'] = True
         messages.append({'role': 'assistant', 'content': text})
@@ -281,7 +294,11 @@ def solve(client, method, question, env, args):
         if done:
             answer, status = value, 'finished'
             break
-        messages.append({'role': 'user', 'content': 'Observation: ' + observation})
+        feedback = 'Observation: ' + observation
+        if state_feedback:
+            feedback += '\n' + page_state_feedback(env)
+            event['tool_state_feedback'] = page_state_feedback(env)
+        messages.append({'role': 'user', 'content': feedback})
     return {'prediction': answer, 'status': status, 'trace': trace,
             'initial_messages': messages[:2], 'llm_calls': len(trace),
             'tool_calls': sum(e.get('action', {}).get('name') in ('search', 'lookup') for e in trace),
@@ -383,6 +400,7 @@ def run(args):
               'offset': args.offset, 'limit': args.limit, 'max_steps': args.max_steps,
               'max_tokens': args.max_tokens, 'timeout': args.timeout, 'retries': args.retries,
               'obs_chars': args.obs_chars, 'methods': args.methods,
+              'state_feedback': getattr(args, 'state_feedback', False),
               'dataset_sha256': hashlib.sha256(data_path.read_bytes()).hexdigest(),
               'corpus_sha256': digest(docs) if docs is not None else None,
               'prompts': read_json(ROOT / 'prompts.json'),
@@ -539,6 +557,8 @@ def main():
     p.add_argument('--resume', action='store_true')
     p.add_argument('--mock', action='store_true')
     p.add_argument('--verbose', action='store_true')
+    p.add_argument('--state-feedback', action='store_true',
+                   help='Expose current Wikipedia page state after each observation')
     p.set_defaults(func=run)
     p = subs.add_parser('prepare', help='Freeze a question subset; strip context from official data')
     p.add_argument('--source', required=True)
