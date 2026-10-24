@@ -1,0 +1,151 @@
+﻿method,id,status,prediction,gold,em,f1,llm_calls,tool_calls,format_errors,seconds,prompt_tokens,completion_tokens
+cot,react-dev-00457,finished,Freyja — associated with the Brísingamen tale and the search for Óðr in the Eddas,"various deities, beings, and heroes",0.0,0.11764705882352941,1,0,0,2.116,123,94
+cot,react-dev-07174,finished,Steve Nallon,Stephen John Coogan,0.0,0.0,1,0,0,1.883,126,63
+cot,react-dev-02053,finished,Melbourne Cricket Ground,Princes Park,0.0,0.0,1,0,0,1.875,146,26
+cot,react-dev-01560,finished,"143,229","143,007",0.0,0.0,1,0,0,1.602,133,50
+cot,react-dev-00851,finished,ANA Holdings,All Nippon,0.0,0.0,1,0,0,1.675,135,40
+cot,react-dev-06916,finished,dice,a pair of dice,0.0,0.5,1,0,0,1.674,124,28
+cot,react-dev-02811,finished,5 million,1.5 million households,0.0,0.4,1,0,0,1.837,126,28
+cot,react-dev-04050,finished,Israeli-American,Israeli-American,1.0,1.0,1,0,0,1.816,118,67
+cot,react-dev-02927,finished,Unknown,Bandai,0.0,0.0,1,0,0,1.945,119,50
+cot,react-dev-04330,finished,Brotherly Leader and Guide of the Revolution,"""Brotherly Leader"" of the Great Socialist People's Libyan Arab Jamahiriya",0.0,0.4,1,0,0,1.84,127,44
+cot,react-dev-07026,finished,Ngadi Chuli,Ngadi Chuli,1.0,1.0,1,0,0,1.601,126,29
+cot,react-dev-01885,finished,Aubrey Plaza,Nick Offerman,0.0,0.0,1,0,0,3.564,117,261
+cot,react-dev-05679,finished,France,Switzerland,0.0,0.0,1,0,0,1.782,116,27
+cot,react-dev-05123,finished,House of Habsburg-Lorraine,House of Habsburg-Lorraine,1.0,1.0,1,0,0,1.927,124,39
+cot,react-dev-06102,finished,Yes,yes,1.0,1.0,1,0,0,2.159,127,49
+cot,react-dev-06849,format_error,,July 25 to August 4,0.0,0.0,1,0,1,4.101,123,442
+cot,react-dev-04237,finished,1967,1967,1.0,1.0,1,0,0,1.518,129,28
+cot,react-dev-03805,finished,3,three official languages,0.0,0.0,1,0,0,1.42,123,29
+cot,react-dev-00200,finished,Crackle,Crackle,1.0,1.0,1,0,0,1.787,127,23
+cot,react-dev-03618,finished,They reject them as unbiblical and scientifically incorrect.,a compromise on biblical inerrancy,0.0,0.0,1,0,0,1.966,127,79
+cot,react-dev-03188,finished,Georgia College & State University,A Scholar Under Siege,0.0,0.0,1,0,0,1.856,124,45
+cot,react-dev-04739,finished,Marianas Trench,Art of Dying,0.0,0.0,1,0,0,1.753,150,27
+cot,react-dev-06414,finished,Lime juice,lime,0.0,0.6666666666666666,1,0,0,1.945,118,41
+cot,react-dev-06709,finished,The Revolutionary Tribunal,La mamma morta,0.0,0.0,1,0,0,2.216,134,61
+cot,react-dev-04525,finished,Protestantism (the Church of England),Roman Catholicism,0.0,0.0,1,0,0,2.026,134,60
+cot,react-dev-01320,finished,Andrew Preston,James Taylor,0.0,0.0,1,0,0,1.741,117,38
+cot,react-dev-03395,finished,"Shoshone, French, and English",French and English,0.0,0.8571428571428571,1,0,0,1.786,119,53
+cot,react-dev-03446,finished,Kansas,The 2008 Kansas Jayhawks,0.0,0.5,1,0,0,1.93,123,39
+cot,react-dev-03543,finished,1972,1972,1.0,1.0,1,0,0,2.159,130,32
+cot,react-dev-00156,finished,Seven Days Battles,The Seven Days Battles,1.0,1.0,1,0,0,1.936,128,48
+cot,react-dev-01439,finished,"Boston, New York City, Philadelphia, Baltimore, and Washington, D.C.","Boston, Providence, Hartford, New York City, Philadelphia, Wilmington, Baltimore, and Washington, D.C.",0.0,0.8571428571428571,1,0,0,2.024,127,52
+cot,react-dev-07275,finished,Kurt Gerron,Kurt Gerron,1.0,1.0,1,0,0,1.763,125,37
+cot,react-dev-04506,finished,New York City,New York City,1.0,1.0,1,0,0,1.568,124,27
+cot,react-dev-04679,finished,No,no,1.0,1.0,1,0,0,1.891,128,44
+cot,react-dev-04152,finished,Chicago (West Chatham) — not New York,Harlem,0.0,0.0,1,0,0,2.175,124,92
+cot,react-dev-00690,finished,Arizona State Sun Devils,Arizona State Sun Devils,1.0,1.0,1,0,0,2.148,142,60
+cot,react-dev-00909,finished,Yes,yes,1.0,1.0,1,0,0,1.749,122,49
+cot,react-dev-03511,finished,Emory University,Emory University.,1.0,1.0,1,0,0,6.315,117,36
+cot,react-dev-02521,finished,Len Wiseman,Len Wiseman,1.0,1.0,1,0,0,1.84,129,41
+cot,react-dev-04678,finished,"330,000","322,421 personnel on active duty",0.0,0.0,1,0,0,1.847,127,40
+cot,react-dev-00807,finished,Game of Thrones,Game of Thrones,1.0,1.0,1,0,0,1.841,119,21
+cot,react-dev-05291,finished,No,no,1.0,1.0,1,0,0,1.888,123,34
+cot,react-dev-05503,finished,"Modernist, traditionalist, and reformist Islamic schools of thought",postmodern schools of thought,0.0,0.5,1,0,0,2.013,125,48
+cot,react-dev-01534,finished,San Marco,San Marco,1.0,1.0,1,0,0,1.716,120,30
+cot,react-dev-02825,finished,Psych,Psych is an American detective comedy-drama,0.0,0.33333333333333337,1,0,0,1.372,129,16
+cot,react-dev-02609,finished,Tiffany & Co.,Tiffany's,0.0,0.0,1,0,0,1.843,129,29
+cot,react-dev-01720,finished,Jaret,Marie,0.0,0.0,1,0,0,1.961,163,23
+cot,react-dev-06432,finished,Academy Award for Best Supporting Actor,Academy Award,0.0,0.5,1,0,0,1.911,127,55
+cot,react-dev-00919,finished,Father Dougal McGuire,Father Dougal McGuire,1.0,1.0,1,0,0,2.026,126,40
+cot,react-dev-03265,finished,Everglades National Park and Biscayne National Park,Biscayne National Park to the east and Everglades National Park to the west,0.0,0.7777777777777778,1,0,0,1.437,120,36
+direct,react-dev-00457,finished,Norse mythology tales,"various deities, beings, and heroes",0.0,0.0,1,0,0,1.665,94,5
+direct,react-dev-07174,finished,John Cooper Clarke,Stephen John Coogan,0.0,0.3333333333333333,1,0,0,1.502,97,5
+direct,react-dev-02053,finished,Princes Park,Princes Park,1.0,1.0,1,0,0,1.491,117,5
+direct,react-dev-01560,finished,"72,516","143,007",0.0,0.0,1,0,0,1.578,104,6
+direct,react-dev-00851,finished,Vanilla Air,All Nippon,0.0,0.0,1,0,0,1.451,106,5
+direct,react-dev-06916,finished,dice,a pair of dice,0.0,0.5,1,0,0,1.546,95,3
+direct,react-dev-02811,finished,5.5 million,1.5 million households,0.0,0.4,1,0,0,1.481,97,7
+direct,react-dev-04050,finished,American,Israeli-American,0.0,0.0,1,0,0,1.564,89,3
+direct,react-dev-02927,finished,Japan,Bandai,0.0,0.0,1,0,0,1.67,90,3
+direct,react-dev-04330,finished,Brotherly Leader and Guide of the Revolution,"""Brotherly Leader"" of the Great Socialist People's Libyan Arab Jamahiriya",0.0,0.4,1,0,0,1.638,98,10
+direct,react-dev-07026,finished,Ngadi Chuli,Ngadi Chuli,1.0,1.0,1,0,0,1.561,97,6
+direct,react-dev-01885,finished,Rashida Jones,Nick Offerman,0.0,0.0,1,0,0,1.548,88,5
+direct,react-dev-05679,finished,Indonesia,Switzerland,0.0,0.0,1,0,0,1.686,87,3
+direct,react-dev-05123,finished,House of Habsburg-Lorraine,House of Habsburg-Lorraine,1.0,1.0,1,0,0,1.637,95,9
+direct,react-dev-06102,finished,Yes,yes,1.0,1.0,1,0,0,1.516,98,3
+direct,react-dev-06849,finished,20–30 July 2017,July 25 to August 4,0.0,0.25,1,0,0,1.733,94,10
+direct,react-dev-04237,finished,1969,1967,0.0,0.0,1,0,0,1.543,100,5
+direct,react-dev-03805,finished,3,three official languages,0.0,0.0,1,0,0,1.58,94,4
+direct,react-dev-00200,finished,Crackle,Crackle,1.0,1.0,1,0,0,1.504,98,4
+direct,react-dev-03618,finished,"They reject evolution and accept biblical creation, holding that all things were created by God in six literal days.",a compromise on biblical inerrancy,0.0,0.08695652173913043,1,0,0,1.641,98,23
+direct,react-dev-03188,finished,Georgia College & State University,A Scholar Under Siege,0.0,0.0,1,0,0,1.634,95,7
+direct,react-dev-04739,finished,Marianas Trench,Art of Dying,0.0,0.0,1,0,0,1.777,121,6
+direct,react-dev-06414,finished,Lime juice,lime,0.0,0.6666666666666666,1,0,0,1.531,89,4
+direct,react-dev-06709,finished,Act III,La mamma morta,0.0,0.0,1,0,0,1.549,105,4
+direct,react-dev-04525,finished,The Church,Roman Catholicism,0.0,0.0,1,0,0,1.654,105,4
+direct,react-dev-01320,finished,James Taylor,James Taylor,1.0,1.0,1,0,0,1.735,88,4
+direct,react-dev-03395,finished,Shoshone and English,French and English,0.0,0.6666666666666666,1,0,0,1.734,90,7
+direct,react-dev-03446,finished,Kansas Jayhawks,The 2008 Kansas Jayhawks,0.0,0.8,1,0,0,1.533,94,6
+direct,react-dev-03543,finished,1972,1972,1.0,1.0,1,0,0,1.525,101,5
+direct,react-dev-00156,finished,Seven Days Battles,The Seven Days Battles,1.0,1.0,1,0,0,1.533,99,6
+direct,react-dev-01439,finished,"Boston, New York City, Philadelphia, Baltimore, and Washington, D.C.","Boston, Providence, Hartford, New York City, Philadelphia, Wilmington, Baltimore, and Washington, D.C.",0.0,0.8571428571428571,1,0,0,1.534,98,18
+direct,react-dev-07275,finished,Kurt Gerron,Kurt Gerron,1.0,1.0,1,0,0,1.374,96,5
+direct,react-dev-04506,finished,New York City,New York City,1.0,1.0,1,0,0,1.831,95,5
+direct,react-dev-04679,finished,No,no,1.0,1.0,1,0,0,1.551,99,3
+direct,react-dev-04152,finished,Brooklyn,Harlem,0.0,0.0,1,0,0,1.762,95,3
+direct,react-dev-00690,finished,Arizona Wildcats,Arizona State Sun Devils,0.0,0.3333333333333333,1,0,0,1.533,113,4
+direct,react-dev-00909,finished,Yes,yes,1.0,1.0,1,0,0,1.422,93,3
+direct,react-dev-03511,finished,Vanderbilt University,Emory University.,0.0,0.5,1,0,0,1.772,88,4
+direct,react-dev-02521,finished,Len Wiseman,Len Wiseman,1.0,1.0,1,0,0,1.741,100,5
+direct,react-dev-04678,finished,"329,614","322,421 personnel on active duty",0.0,0.0,1,0,0,1.617,98,6
+direct,react-dev-00807,finished,Game of Thrones,Game of Thrones,1.0,1.0,1,0,0,1.433,90,6
+direct,react-dev-05291,finished,No,no,1.0,1.0,1,0,0,1.779,94,3
+direct,react-dev-05503,finished,Not applicable — Hafiz Rashid Khan is not a recognized academic figure with an established discipline or schools of thought.,postmodern schools of thought,0.0,0.27272727272727276,1,0,0,1.681,96,25
+direct,react-dev-01534,finished,San Marco,San Marco,1.0,1.0,1,0,0,1.298,91,4
+direct,react-dev-02825,finished,Psych,Psych is an American detective comedy-drama,0.0,0.33333333333333337,1,0,0,1.935,100,3
+direct,react-dev-02609,finished,Tiffany & Co.,Tiffany's,0.0,0.0,1,0,0,1.739,100,6
+direct,react-dev-01720,finished,Jane,Marie,0.0,0.0,1,0,0,1.333,134,3
+direct,react-dev-06432,finished,Academy Award,Academy Award,1.0,1.0,1,0,0,1.418,98,4
+direct,react-dev-00919,finished,Father Dougal McGuire,Father Dougal McGuire,1.0,1.0,1,0,0,1.895,97,7
+direct,react-dev-03265,finished,Everglades National Park and Biscayne National Park,Biscayne National Park to the east and Everglades National Park to the west,0.0,0.7777777777777778,1,0,0,1.75,91,12
+react,react-dev-00457,finished,"Frigg is associated with the goddesses Fulla, Lofn, Hlín, and Gná (and ambiguously with Jörð/Earth); the surviving tales about her come mainly from Norse mythology sources such as the Prose Edda and Poetic Edda.","various deities, beings, and heroes",0.0,0.05555555555555555,3,2,0,7.219,1579,247
+react,react-dev-07174,max_steps,,Stephen John Coogan,0.0,0.0,7,4,3,25.258,3050,681
+react,react-dev-02053,finished,Princes Park,Princes Park,1.0,1.0,4,3,0,11.535,1968,86
+react,react-dev-01560,finished,"143,229","143,007",0.0,0.0,3,2,0,7.797,1470,81
+react,react-dev-00851,max_steps,,All Nippon,0.0,0.0,7,6,1,18.532,4509,328
+react,react-dev-06916,finished,dice,a pair of dice,0.0,0.5,2,1,0,4.466,675,51
+react,react-dev-02811,max_steps,,1.5 million households,0.0,0.0,7,7,0,21.921,3789,180
+react,react-dev-04050,finished,Israeli-American,Israeli-American,1.0,1.0,4,3,0,8.984,1883,75
+react,react-dev-02927,max_steps,,Bandai,0.0,0.0,7,7,0,22.089,4354,278
+react,react-dev-04330,finished,Brotherly Leader,"""Brotherly Leader"" of the Great Socialist People's Libyan Arab Jamahiriya",0.0,0.3636363636363636,2,1,0,4.897,810,53
+react,react-dev-07026,finished,Ngadi Chuli,Ngadi Chuli,1.0,1.0,3,2,0,7.246,1552,92
+react,react-dev-01885,finished,Nick Offerman,Nick Offerman,1.0,1.0,3,2,0,9.213,1197,76
+react,react-dev-05679,finished,Switzerland,Switzerland,1.0,1.0,2,1,0,3.994,660,50
+react,react-dev-05123,finished,House of Habsburg-Lorraine,House of Habsburg-Lorraine,1.0,1.0,2,1,0,4.724,784,73
+react,react-dev-06102,finished,Yes,yes,1.0,1.0,3,2,0,7.166,1550,79
+react,react-dev-06849,max_steps,,July 25 to August 4,0.0,0.0,7,6,1,22.509,3952,790
+react,react-dev-04237,finished,1967,1967,1.0,1.0,3,2,0,7.023,1180,59
+react,react-dev-03805,finished,3,three official languages,0.0,0.0,3,2,0,7.132,1287,65
+react,react-dev-00200,finished,Crackle,Crackle,1.0,1.0,2,1,0,4.352,752,52
+react,react-dev-03618,finished,"It believes in the inerrancy of the Bible and a literal interpretation of the Book of Genesis, including events such as Noah's Flood.",a compromise on biblical inerrancy,0.0,0.08695652173913043,6,5,0,15.461,3221,175
+react,react-dev-03188,finished,Georgia Southern University,A Scholar Under Siege,0.0,0.0,3,2,0,8.125,1139,65
+react,react-dev-04739,finished,Art of Dying,Art of Dying,1.0,1.0,5,3,1,14.13,2565,208
+react,react-dev-06414,finished,lime juice,lime,0.0,0.6666666666666666,4,2,1,8.61,1642,186
+react,react-dev-06709,max_steps,,La mamma morta,0.0,0.0,7,7,0,18.364,4271,152
+react,react-dev-04525,finished,Protestantism,Roman Catholicism,0.0,0.0,4,2,1,8.507,1591,234
+react,react-dev-01320,finished,Andrew Preston,James Taylor,0.0,0.0,3,2,0,7.065,1198,90
+react,react-dev-03395,finished,"English, German, French, and Spanish",French and English,0.0,0.7499999999999999,7,5,1,16.878,4298,323
+react,react-dev-03446,finished,Kansas Jayhawks,The 2008 Kansas Jayhawks,0.0,0.8,2,1,0,4.362,736,57
+react,react-dev-03543,finished,1972,1972,1.0,1.0,4,3,0,9.044,1973,87
+react,react-dev-00156,finished,Seven Days Battles,The Seven Days Battles,1.0,1.0,4,2,1,10.058,1519,261
+react,react-dev-01439,max_steps,,"Boston, Providence, Hartford, New York City, Philadelphia, Wilmington, Baltimore, and Washington, D.C.",0.0,0.0,7,7,0,15.179,4335,207
+react,react-dev-07275,finished,Kurt Gerron,Kurt Gerron,1.0,1.0,2,1,0,4.3,778,46
+react,react-dev-04506,finished,New York City,New York City,1.0,1.0,4,2,1,13.389,1571,188
+react,react-dev-04679,finished,No,no,1.0,1.0,3,2,0,6.663,1274,108
+react,react-dev-04152,max_steps,,Harlem,0.0,0.0,7,6,1,19.454,4076,458
+react,react-dev-00690,finished,Arizona State Sun Devils,Arizona State Sun Devils,1.0,1.0,5,3,1,12.536,2509,305
+react,react-dev-00909,finished,Yes,yes,1.0,1.0,3,2,0,7.29,1508,60
+react,react-dev-03511,finished,Emory University,Emory University.,1.0,1.0,3,2,0,7.995,1393,72
+react,react-dev-02521,finished,Len Wiseman,Len Wiseman,1.0,1.0,4,2,1,9.701,1921,256
+react,react-dev-04678,finished,"336,978","322,421 personnel on active duty",0.0,0.0,4,3,0,8.702,2156,95
+react,react-dev-00807,finished,Game of Thrones,Game of Thrones,1.0,1.0,3,1,1,6.243,1050,124
+react,react-dev-05291,finished,No,no,1.0,1.0,3,2,0,7.068,1426,79
+react,react-dev-05503,finished,critical theory and cultural studies,postmodern schools of thought,0.0,0.0,4,3,0,9.377,2238,119
+react,react-dev-01534,finished,San Marco,San Marco,1.0,1.0,3,2,0,6.796,1221,73
+react,react-dev-02825,finished,Psych,Psych is an American detective comedy-drama,0.0,0.33333333333333337,5,2,2,10.503,2036,297
+react,react-dev-02609,finished,Tiffany & Co.,Tiffany's,0.0,0.0,4,2,1,7.642,1532,153
+react,react-dev-01720,max_steps,,Marie,0.0,0.0,7,7,0,20.055,5004,212
+react,react-dev-06432,max_steps,,Academy Award,0.0,0.0,7,6,1,23.196,3918,349
+react,react-dev-00919,finished,Father Dougal McGuire,Father Dougal McGuire,1.0,1.0,5,3,1,10.344,2407,251
+react,react-dev-03265,finished,Everglades National Park and Biscayne National Park,Biscayne National Park to the east and Everglades National Park to the west,0.0,0.7777777777777778,4,3,0,9.987,1776,115

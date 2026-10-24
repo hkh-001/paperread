@@ -1,0 +1,70 @@
+{
+  "methods": {
+    "direct": {
+      "n": 50,
+      "correct": 18,
+      "em": 0.36,
+      "f1": 0.5035587552544074,
+      "statuses": {
+        "finished": 50
+      },
+      "llm_calls": 50,
+      "tool_calls": 0,
+      "format_errors": 0,
+      "prompt_tokens": 4889,
+      "completion_tokens": 306,
+      "seconds": 80.138
+    },
+    "cot": {
+      "n": 50,
+      "correct": 19,
+      "em": 0.38,
+      "f1": 0.5081942110177404,
+      "statuses": {
+        "finished": 49,
+        "format_error": 1
+      },
+      "llm_calls": 50,
+      "tool_calls": 0,
+      "format_errors": 1,
+      "prompt_tokens": 6339,
+      "completion_tokens": 2750,
+      "seconds": 100.764
+    },
+    "react": {
+      "n": 50,
+      "correct": 23,
+      "em": 0.46,
+      "f1": 0.5466785243741765,
+      "statuses": {
+        "finished": 40,
+        "max_steps": 10
+      },
+      "llm_calls": 210,
+      "tool_calls": 150,
+      "format_errors": 20,
+      "prompt_tokens": 105283,
+      "completion_tokens": 8801,
+      "seconds": 543.081
+    }
+  },
+  "paired": {
+    "direct_vs_cot": {
+      "both_wrong": 28,
+      "only_direct": 3,
+      "both_correct": 15,
+      "only_cot": 4
+    },
+    "direct_vs_react": {
+      "both_wrong": 25,
+      "only_direct": 2,
+      "both_correct": 16,
+      "only_react": 7
+    },
+    "cot_vs_react": {
+      "both_wrong": 27,
+      "both_correct": 19,
+      "only_react": 4
+    }
+  }
+}
