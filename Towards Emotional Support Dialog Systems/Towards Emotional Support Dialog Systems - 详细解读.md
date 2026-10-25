@@ -36,6 +36,17 @@ paper: "[[Towards Emotional Support Dialog Systems.pdf]]"
 > 官方页面：https://aclanthology.org/2021.acl-long.269/  
 > 数据与代码：https://github.com/thu-coai/Emotional-Support-Conversation
 
+## 关键图表阅读路线
+
+原图来自本目录的 15 页 ACL 会议版 PDF；以下同时标明 PDF 与印刷页码。先理解支持阶段与策略，再区分自动指标和实际交互评价。
+
+| 阅读位置 | 原图表 / PDF 页码 | 重点问题 |
+|---|---|---|
+| 第 3 节 | Figure 3 / 第 4 页 | 阶段、策略与话语表达有什么关系？ |
+| 第 5.4 节 | Figure 4 / 第 7 页 | 不同策略在对话早晚的使用比例怎样变化？ |
+| 第 7 节 | Table 4 / 第 8 页 | 正确策略与模型自己预测策略的结果是否一致？ |
+| 第 8 节 | Table 5 / 第 8 页 | 人类更喜欢什么，优势是否通过统计检验？ |
+
 ## 0. 为什么把它作为第 6 篇
 
 MemoryBank 讨论“长期陪伴系统记住什么”，却没有严格定义“陪伴时应该怎样帮助”。本篇先退一步建立情感支持（Emotional Support Conversation, ESC）的任务、策略和数据：系统不能只复述情绪，而要探索问题、安慰用户、再协助行动。它为后续研究“具有记忆的情感 Agent”提供任务基础和评测语言。
@@ -82,6 +93,16 @@ ESC 框架改编自 Hill’s Helping Skills Theory，把过程分为 Exploration
 Emotional chatting 关注回复表现某种情绪；empathetic dialogue 关注理解和回应经历；既有支持数据常是单轮帖子—回复。ESC 更强调多轮过程、策略时机和结果。本文的主张是：**高质量多轮数据与显式支持策略能使生成模型提供更有效的基础同伴式支持。**
 
 ## 3. 三阶段 ESC Framework
+
+![原论文 Figure 3：三阶段情感支持框架与策略示例](assets/fig-03-support-framework-p004.png)
+
+*来源：原论文 Figure 3，PDF 第 4 页，印刷第 3472 页。*
+
+**先看左图：** Exploration → Comforting → Action 的黑箭头表示建议顺序，灰色虚线允许根据对话调整。再看右表：策略是阶段内可以采取的沟通动作，例如提问、情绪反映、肯定、建议；阶段与策略不是同一层级。
+
+**具体理解：** 用户说考试失败时，系统可以先提问了解困难，再承接失落，最后共同考虑下一步。右表的 Examples 展示这些动作怎样说出来；Lexical Features 列则是数据中与某策略相关的词语及统计值。
+
+**边界：** 框架不要求每次对话固定走完三步，出现某个高频词也不能充分证明真正使用了对应策略。图提供支持对话的组织原则，不能单独证明某种策略顺序产生了效果。
 
 ```text
 Exploration → Comforting → Action
@@ -149,6 +170,16 @@ Exploration → Comforting → Action
 
 ### 5.4 策略分布
 
+![原论文 Figure 4：策略随对话进程的分布](assets/fig-04-strategy-progression-p007.png)
+
+*来源：原论文 Figure 4，PDF 第 7 页，印刷第 3475 页。*
+
+**读图：** 横轴是归一化对话进度，不是固定轮数；纵轴是策略比例。各颜色带的厚度代表该阶段使用某策略的占比，不能把色带的上边界直接当作该策略的数值。
+
+**具体观察：** Question 在早期占比较大，随后减少；Providing Suggestions 后期占比增加，安慰类策略贯穿过程。这与“先了解，再支持和行动”的建议相符，也说明支持策略需要考虑时机。
+
+**边界：** 它统计的是数据中的使用规律，没有随机分配策略顺序，所以不能据此断定照搬同一顺序就一定更有效。不同长度对话被归一化后，实际轮数差异也被隐藏了。
+
 Question 3,109（20.9%）、Affirmation/Reassurance 2,388（16.1%）、Providing Suggestions 2,323（15.6%）、Self-disclosure 1,396（9.4%）、Reflection of Feelings 1,156（7.8%）、Information 904（6.1%）、Restatement 883（5.9%）、Others 2,696（18.1%）。类别不平衡会影响策略预测；“Others”过大也说明策略体系并非穷尽。
 
 ## 6. 模型：策略 token 如何进入生成
@@ -195,6 +226,16 @@ $$
 
 ## 7. 自动评估
 
+![原论文 Table 4：策略条件生成的自动评价](assets/table-04-automatic-evaluation-p008.png)
+
+*来源：原论文 Table 4，PDF 第 8 页，印刷第 3476 页。*
+
+**读表：** 固定同一底座再比 Vanilla、Joint、Oracle。Vanilla 不使用策略标签，Joint 自己预测策略，Oracle 直接获得人工参考策略；PPL 越低越好，其余指标越高越好。横线“—”表示未报告，不能按 0 计算。
+
+**具体比较：** BlenderBot 的 Oracle ROUGE-L 为 17.90，高于 Vanilla 的 15.43；但 Joint 为 15.46，并未达到 Oracle 的收益。BLEU-2 上 Joint 5.35 还略低于 Vanilla 5.45，说明给定正确策略的优势不能直接等同于自动选策略的优势。
+
+**边界：** Oracle 使用测试时通常不可得的金标条件；这些指标也主要反映与参考答案的相似性。是否真正帮助用户，需要继续看人类交互评价。
+
 底座为 DialoGPT-small 与 BlenderBot-small-90M。指标：PPL 越低越好；BLEU-2、ROUGE-L、Embedding Extrema 越高越好。这些指标主要测参考相似或语义近似，不直接测用户是否被帮助。
 
 | Backbone | Variant | PPL↓ | BLEU-2↑ | ROUGE-L↑ | Extrema↑ |
@@ -209,6 +250,16 @@ $$
 Oracle 显著优于竞争者，说明正确策略条件很有用；Joint 多数自动指标略低于 Vanilla，因为一旦预测策略与参考不同，即使回复合理，n-gram 重合也下降。这是评价失配的典型例子。
 
 ## 8. 人类交互评估
+
+![原论文 Table 5：Joint 与三种对照的人类交互评价](assets/table-05-human-evaluation-p008.png)
+
+*来源：原论文 Table 5，PDF 第 8 页，印刷第 3476 页；保留平局说明与显著性标记。*
+
+**读表：** 每个对照下都有 Win / Lose 两列，表示参与者更偏好 Joint 还是对照，平局没有列出。`w/o ft` 是未在 ESConv 微调的模型，Vanilla 使用该数据但不显式用策略，Random 则随机采样策略。三者回答不同的实验问题。
+
+**具体比较：** Overall 中 Joint 对未微调模型为 73 胜 / 20 负，对 Vanilla 为 51 胜 / 34 负，后者还剩 15 次平局。这些是每对 100 次比较中的数量，不能解释为准确率提高 51 个百分点。
+
+**边界：** `†` 对应 p<0.1，`‡` 对应 p<0.05，部分优势仅为数值更高或较弱证据。例如 Joint 对 Random 的 Comforting 为 47 / 39 且无标记，不能声称所有维度都在 p<0.05 下显著更好；偏好结果也不是长期效果指标。
 
 每名参与者与两个随机排序模型对话；每对模型 100 段比较。表中不含 ties：
 
