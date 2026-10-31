@@ -20,8 +20,8 @@ tags:
   - 言语强化学习
   - ReAct
   - 人机交互
-status: 待阅读
-date_read: null
+status: 已读
+date_read: 2026-10-31
 paper: "[[Reflexion - Language Agents with Verbal Reinforcement Learning.pdf]]"
 ---
 

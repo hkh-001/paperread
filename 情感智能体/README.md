@@ -4,9 +4,9 @@
 
 ## 当前进度
 
-截至 2026-10-24，已阅读 **2 / 8 篇**：第一篇 Agent 综述与 ReAct。ReAct 已完成五十题三组对照及新五十题页面状态消融，其余 6 篇为待阅读材料。
+截至 2026-10-31，已阅读 **5 / 8 篇**：Agent 综述、ReAct、Reflexion、Generative Agents 与 MemoryBank。后三篇于 2026-10-31 阅读完成。ReAct 已完成五十题三组对照及新五十题页面状态消融，其余 3 篇为待阅读材料。
 
-详细解读文件已经准备好，不代表已经读完。阅读状态以实际进度为准；具体阅读日期尚未确认，笔记中的 `date_read` 暂留空。
+详细解读文件已经准备好，不代表已经读完。阅读状态以实际进度为准；前两篇的具体阅读日期尚未确认，`date_read` 暂留空。
 
 ## 阅读索引
 
@@ -14,10 +14,10 @@
 | --- | --- | --- |
 | [A Survey on Large Language Model based Autonomous Agents](A%20Survey%20on%20Large%20Language%20Model%20based%20Autonomous%20Agents/A%20Survey%20on%20Large%20Language%20Model%20based%20Autonomous%20Agents%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 已读 | — |
 | [ReAct - Synergizing Reasoning and Acting in Language Models](ReAct%20-%20Synergizing%20Reasoning%20and%20Acting%20in%20Language%20Models/ReAct%20-%20Synergizing%20Reasoning%20and%20Acting%20in%20Language%20Models%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 已读 | 已完成三组对照及页面状态消融 |
-| [Generative Agents - Interactive Simulacra of Human Behavior](Generative%20Agents%20-%20Interactive%20Simulacra%20of%20Human%20Behavior/Generative%20Agents%20-%20Interactive%20Simulacra%20of%20Human%20Behavior%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 待阅读 | — |
+| [Generative Agents - Interactive Simulacra of Human Behavior](Generative%20Agents%20-%20Interactive%20Simulacra%20of%20Human%20Behavior/Generative%20Agents%20-%20Interactive%20Simulacra%20of%20Human%20Behavior%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 已读 | — |
 | [LongMemEval - Benchmarking Chat Assistants on Long-Term Interactive Memory](LongMemEval%20-%20Benchmarking%20Chat%20Assistants%20on%20Long-Term%20Interactive%20Memory/LongMemEval%20-%20Benchmarking%20Chat%20Assistants%20on%20Long-Term%20Interactive%20Memory%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 待阅读 | — |
-| [MemoryBank - Enhancing Large Language Models with Long-Term Memory](MemoryBank%20-%20Enhancing%20Large%20Language%20Models%20with%20Long-Term%20Memory/MemoryBank%20-%20Enhancing%20Large%20Language%20Models%20with%20Long-Term%20Memory%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 待阅读 | — |
-| [Reflexion - Language Agents with Verbal Reinforcement Learning](Reflexion%20-%20Language%20Agents%20with%20Verbal%20Reinforcement%20Learning/Reflexion%20-%20Language%20Agents%20with%20Verbal%20Reinforcement%20Learning%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 待阅读 | — |
+| [MemoryBank - Enhancing Large Language Models with Long-Term Memory](MemoryBank%20-%20Enhancing%20Large%20Language%20Models%20with%20Long-Term%20Memory/MemoryBank%20-%20Enhancing%20Large%20Language%20Models%20with%20Long-Term%20Memory%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 已读 | — |
+| [Reflexion - Language Agents with Verbal Reinforcement Learning](Reflexion%20-%20Language%20Agents%20with%20Verbal%20Reinforcement%20Learning/Reflexion%20-%20Language%20Agents%20with%20Verbal%20Reinforcement%20Learning%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 已读 | — |
 | [SOTOPIA - Interactive Evaluation for Social Intelligence in Language Agents](SOTOPIA%20-%20Interactive%20Evaluation%20for%20Social%20Intelligence%20in%20Language%20Agents/SOTOPIA%20-%20Interactive%20Evaluation%20for%20Social%20Intelligence%20in%20Language%20Agents%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 待阅读 | — |
 | [Towards Emotional Support Dialog Systems](Towards%20Emotional%20Support%20Dialog%20Systems/Towards%20Emotional%20Support%20Dialog%20Systems%20-%20%E8%AF%A6%E7%BB%86%E8%A7%A3%E8%AF%BB.md) | 待阅读 | — |
 

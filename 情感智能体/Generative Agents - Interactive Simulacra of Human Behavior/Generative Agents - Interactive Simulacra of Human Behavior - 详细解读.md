@@ -23,8 +23,8 @@ tags:
   - 多智能体
   - 社会模拟
   - 人机交互
-status: 待阅读
-date_read: null
+status: 已读
+date_read: 2026-10-31
 paper: "[[Generative Agents - Interactive Simulacra of Human Behavior.pdf]]"
 ---
 
